@@ -3,22 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>SNIPER GOD'S PLAN — V3.6.9 + V5 SUPER SCALP</title>
+
+<title>SNIPER GOD'S PLAN — V3.6.9</title>
 
 <style>
-*{box-sizing:border-box}
+
+*{
+    box-sizing:border-box;
+}
+
 body{
     margin:0;
     background:#080b10;
     color:#e8edf5;
     font-family:Arial,Tahoma,sans-serif;
 }
+
 .app{
     max-width:900px;
     margin:auto;
     min-height:100vh;
     padding:18px;
 }
+
 .header{
     border:1px solid #26303d;
     border-radius:18px;
@@ -27,22 +34,25 @@ body{
     box-shadow:0 10px 35px rgba(0,0,0,.35);
     margin-bottom:16px;
 }
+
 .logo{
     font-size:26px;
     font-weight:900;
-    letter-spacing:.5px;
 }
+
 .sub{
     margin-top:6px;
     color:#8e9aaa;
     font-size:13px;
 }
+
 .engine-bar{
     display:flex;
     gap:8px;
     margin-top:15px;
     flex-wrap:wrap;
 }
+
 .badge{
     padding:7px 11px;
     border-radius:999px;
@@ -50,9 +60,21 @@ body{
     font-weight:bold;
     border:1px solid #303b4a;
 }
-.badge.a{color:#9ec7ff;background:#101b2a}
-.badge.b{color:#ffd77a;background:#211b0d}
-.badge.r{color:#ff8d8d;background:#241113}
+
+.badge.a{
+    color:#9ec7ff;
+    background:#101b2a;
+}
+
+.badge.b{
+    color:#ffd77a;
+    background:#211b0d;
+}
+
+.badge.r{
+    color:#ff8d8d;
+    background:#241113;
+}
 
 .card{
     background:#0d131b;
@@ -61,79 +83,105 @@ body{
     padding:18px;
     margin-bottom:14px;
 }
+
 .phase{
     color:#7faef4;
     font-size:12px;
     font-weight:bold;
     margin-bottom:7px;
 }
-h2{
-    margin:0 0 10px;
-    font-size:20px;
-}
+
 .question{
-    font-size:18px;
+    font-size:19px;
     font-weight:bold;
     line-height:1.7;
 }
+
 .hint{
     color:#8995a6;
     font-size:13px;
     line-height:1.7;
     margin-top:7px;
 }
+
 .options{
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:9px;
-    margin-top:15px;
+    gap:10px;
+    margin-top:18px;
 }
+
 button{
     border:1px solid #303b49;
     background:#111923;
     color:#e8edf5;
     border-radius:12px;
-    padding:13px;
+    padding:15px;
     cursor:pointer;
     font-weight:bold;
     font-size:14px;
     transition:.15s;
 }
+
 button:hover{
     border-color:#6389bd;
     transform:translateY(-1px);
 }
+
 button.primary{
     background:#18283d;
     border-color:#527eb7;
 }
+
 button.good{
     background:#102419;
     border-color:#2c7547;
     color:#8ce0a8;
 }
+
 button.warn{
     background:#241e0d;
     border-color:#8c6a20;
     color:#f3d277;
 }
+
 button.bad{
     background:#271215;
     border-color:#77323a;
     color:#ff9ca2;
 }
+
+button.scalp{
+    background:#211b0d;
+    border-color:#8c6a20;
+    color:#ffd77a;
+    min-height:100px;
+    font-size:17px;
+}
+
+button.day{
+    background:#101b2a;
+    border-color:#527eb7;
+    color:#9ec7ff;
+    min-height:100px;
+    font-size:17px;
+}
+
 button.back{
     background:#10151d;
     color:#aeb8c7;
 }
+
 .footer-actions{
     display:flex;
     gap:8px;
     margin-top:14px;
 }
+
 .footer-actions button{
     flex:1;
 }
+
 .progress{
     height:5px;
     background:#151c25;
@@ -141,6 +189,7 @@ button.back{
     overflow:hidden;
     margin-top:13px;
 }
+
 .progress span{
     display:block;
     height:100%;
@@ -148,29 +197,44 @@ button.back{
     width:0%;
     transition:.25s;
 }
+
 .state{
     text-align:center;
-    padding:22px 12px;
+    padding:25px 12px;
 }
+
 .state .icon{
-    font-size:42px;
+    font-size:45px;
     margin-bottom:8px;
 }
+
 .state h2{
     font-size:24px;
 }
-.green{color:#78e29a}
-.yellow{color:#f1cd6a}
-.red{color:#ff858d}
-.blue{color:#82b5ff}
-.orange{color:#ffb36a}
+
+.green{
+    color:#78e29a;
+}
+
+.yellow{
+    color:#f1cd6a;
+}
+
+.red{
+    color:#ff858d;
+}
+
+.orange{
+    color:#ffb36a;
+}
 
 .summary{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:8px;
-    margin-top:12px;
+    margin-top:15px;
 }
+
 .stat{
     padding:11px;
     border:1px solid #242e3a;
@@ -178,22 +242,27 @@ button.back{
     background:#0a1017;
     text-align:center;
 }
+
 .stat b{
     display:block;
-    font-size:18px;
+    font-size:17px;
 }
+
 .stat small{
     color:#8490a0;
 }
+
 .timeline{
     border-right:2px solid #273443;
     padding-right:14px;
     margin-top:10px;
 }
+
 .node{
     margin:0 0 13px;
     position:relative;
 }
+
 .node:before{
     content:"";
     position:absolute;
@@ -204,71 +273,258 @@ button.back{
     border-radius:50%;
     background:#547eb4;
 }
+
 .node strong{
     display:block;
 }
+
 .node span{
     color:#8592a3;
     font-size:12px;
 }
-input,select{
-    width:100%;
-    padding:12px;
-    margin-top:8px;
-    border-radius:10px;
-    border:1px solid #303b49;
-    background:#090e14;
-    color:#fff;
-    font-size:14px;
+
+.mode-selected{
+    text-align:center;
+    margin-bottom:12px;
 }
+
+.mode-selected span{
+    display:inline-block;
+    padding:7px 13px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.mode-scalp{
+    color:#ffd77a;
+    background:#211b0d;
+    border:1px solid #8c6a20;
+}
+
+.mode-day{
+    color:#9ec7ff;
+    background:#101b2a;
+    border:1px solid #527eb7;
+}
+
 @media(max-width:600px){
-    .options{grid-template-columns:1fr}
-    .summary{grid-template-columns:1fr 1fr}
+
+    .options{
+        grid-template-columns:1fr;
+    }
+
+    .summary{
+        grid-template-columns:1fr 1fr;
+    }
+
 }
+
 </style>
 </head>
 
 <body>
+
 <div class="app">
 
 <header class="header">
-    <div class="logo">🦅 SNIPER GOD'S PLAN</div>
-    <div class="sub">V3.6.9 STRUCTURAL SNIPER + V5 SUPER SCALP</div>
+
+    <div class="logo">
+        🦅 SNIPER GOD'S PLAN
+    </div>
+
+    <div class="sub">
+        V3.6.9 STRUCTURAL SNIPER + V5 SUPER SCALP
+    </div>
 
     <div class="engine-bar">
-        <div class="badge a">🦅 V3.6.9 STRUCTURAL</div>
-        <div class="badge b">⚡ V5 SUPER SCALP</div>
-        <div class="badge r">🔒 MASTER RISK ENGINE</div>
+
+        <div class="badge a">
+            🦅 DAY TRADE — V3.6.9
+        </div>
+
+        <div class="badge b">
+            ⚡ SUPER SCALP — V5
+        </div>
+
+        <div class="badge r">
+            🔒 MASTER RISK ENGINE
+        </div>
+
     </div>
 
     <div class="progress">
         <span id="progressBar"></span>
     </div>
+
 </header>
 
 <div id="app"></div>
 
 </div>
 
+
 <script>
 
 /* =========================================================
    SNIPER GOD'S PLAN
    V3.6.9 + V5 SUPER SCALP
-   TRADING ASSISTANT ONLY
+
+   TRADING ASSISTANT
+
+   MODE ROUTER
    ========================================================= */
 
-const steps = [
+let mode = null;
 
-/* =========================
-   PHASE A — BEFORE TRADE
-   ========================= */
+let current = 0;
+
+let history = [];
+
+let answers = {};
+
+
+/* =========================================================
+   MODE SELECTION
+   ========================================================= */
+
+function renderModeSelector(){
+
+    document.getElementById("progressBar").style.width="0%";
+
+    document.getElementById("app").innerHTML = `
+
+        <div class="card">
+
+            <div class="phase">
+                🦅 SNIPER GOD'S PLAN — MODE SELECTOR
+            </div>
+
+            <div class="question">
+                امروز می‌خواهی چه نوع معامله‌ای انجام بدهی؟
+            </div>
+
+            <div class="hint">
+                ابتدا نوع معامله را انتخاب کن.
+                بعد Assistant فقط مسیر مربوط به همان موتور را فعال می‌کند.
+                قوانین مادر سیستم در هر دو حالت مشترک هستند.
+            </div>
+
+            <div class="options">
+
+                <button
+                    class="scalp"
+                    onclick="selectMode('scalp')">
+
+                    ⚡ SUPER SCALP
+
+                    <br><br>
+
+                    V5 SUPER SCALP
+
+                    <br>
+
+                    <small>
+                    Short + Fast + Precise
+                    </small>
+
+                </button>
+
+
+                <button
+                    class="day"
+                    onclick="selectMode('day')">
+
+                    🦅 DAY TRADE
+
+                    <br><br>
+
+                    V3.6.9 STRUCTURAL SNIPER
+
+                    <br>
+
+                    <small>
+                    Structural Move
+                    </small>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="phase">
+                MASTER SYSTEM
+            </div>
+
+            <div class="timeline">
+
+                <div class="node">
+                    <strong>Context</strong>
+                    <span>Monthly → Weekly → Daily → H4 → H1</span>
+                </div>
+
+                <div class="node">
+                    <strong>Structure</strong>
+                    <span>HTF → M15 → M5 → M1</span>
+                </div>
+
+                <div class="node">
+                    <strong>Liquidity</strong>
+                    <span>HTF + Session + Lower TF</span>
+                </div>
+
+                <div class="node">
+                    <strong>HTF Reaction</strong>
+                    <span>Acceptance / Sweep & Reversal</span>
+                </div>
+
+                <div class="node">
+                    <strong>Entry Gate</strong>
+                    <span>Risk + SL + Target Space</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    `;
+}
+
+
+/* =========================================================
+   MODE ROUTER
+   ========================================================= */
+
+function selectMode(selected){
+
+    mode = selected;
+
+    current = 0;
+
+    history = [];
+
+    answers = {};
+
+    render();
+
+}
+
+
+/* =========================================================
+   MASTER QUESTIONS
+   ========================================================= */
+
+const masterSteps = [
 
 {
     id:"trades",
     phase:"PHASE A — DAILY TRADE LIMIT",
     title:"امروز چند معامله انجام شده؟",
-    hint:"حداکثر ۳ معامله در روز.",
+    hint:"Maximum Daily Trades = 3",
     options:[
         ["0–1 Trade","ok","trades01"],
         ["2 Trades","warn","trades2"],
@@ -280,7 +536,7 @@ const steps = [
     id:"risk",
     phase:"PHASE A — DAILY RISK STATE",
     title:"وضعیت ریسک امروز چیست؟",
-    hint:"تعداد Win/Loss و مخصوصاً Consecutive Loss را بررسی کن.",
+    hint:"تعداد Win / Loss و Consecutive Loss را بررسی کن.",
     options:[
         ["0 Consecutive Loss","ok","riskok"],
         ["1 Consecutive Loss","warn","risk1"],
@@ -292,7 +548,7 @@ const steps = [
     id:"monthly",
     phase:"PHASE A — HTF CONTEXT",
     title:"Monthly Context چیست؟",
-    hint:"Monthly فقط Context است و به‌تنهایی Entry نمی‌دهد.",
+    hint:"Monthly فقط Context است.",
     options:[
         ["🟢 Bullish","ok","bull"],
         ["🔴 Bearish","bad","bear"],
@@ -305,7 +561,7 @@ const steps = [
     id:"weekly",
     phase:"PHASE A — HTF CONTEXT",
     title:"Weekly Context چیست؟",
-    hint:"High / Low / Major Swing / Liquidity / Expansion / Correction را بررسی کن.",
+    hint:"Weekly High / Low / Major Swing / Liquidity.",
     options:[
         ["🟢 Bullish","ok","bull"],
         ["🔴 Bearish","bad","bear"],
@@ -318,7 +574,7 @@ const steps = [
     id:"daily",
     phase:"PHASE A — HTF CONTEXT",
     title:"Daily Context چیست؟",
-    hint:"Daily Structure + High/Low + Previous Day Liquidity + Location.",
+    hint:"Daily Structure + High/Low + Liquidity + Location.",
     options:[
         ["🟢 Bullish","ok","bull"],
         ["🔴 Bearish","bad","bear"],
@@ -329,7 +585,7 @@ const steps = [
 
 {
     id:"h4",
-    phase:"PHASE A — STRUCTURE",
+    phase:"PHASE A — H4 MARKET STATE",
     title:"H4 Market State چیست؟",
     hint:"HH → HL → HH = Bullish | LL → LH → LL = Bearish.",
     options:[
@@ -344,7 +600,7 @@ const steps = [
     id:"h1",
     phase:"PHASE A — H1 ROUTER",
     title:"H1 نسبت به H4 در چه وضعیتی است؟",
-    hint:"Alignment، Correction یا Counter-Trend را مشخص کن.",
+    hint:"Alignment / Correction / Counter-Trend.",
     options:[
         ["🟢 H1 Alignment","ok","alignment"],
         ["🟠 H1 Correction","warn","correction"],
@@ -357,7 +613,7 @@ const steps = [
     id:"ctl",
     phase:"PHASE A — COUNTER-TREND ENGINE",
     title:"وضعیت Counter-Trend Line چیست؟",
-    hint:"Touch #2 رویداد کلیدی است؛ Touch به‌تنهایی Entry نیست.",
+    hint:"Touch #2 رویداد کلیدی است. Touch به‌تنهایی Entry نیست.",
     options:[
         ["No Counter-Trend","ok","none"],
         ["Touch #1","warn","touch1"],
@@ -367,15 +623,11 @@ const steps = [
     ]
 },
 
-/* =========================
-   LIQUIDITY
-   ========================= */
-
 {
     id:"liquidity",
     phase:"PHASE A — LIQUIDITY MAP",
     title:"Liquidity Map اصلی کجاست؟",
-    hint:"Monthly / Weekly / Daily / H4 / H1 + Session + Lower TF Liquidity را بررسی کن.",
+    hint:"HTF + Session + Lower TF Liquidity.",
     options:[
         ["🟢 Clear Liquidity Map","ok","clear"],
         ["🟡 Liquidity Identified / Pending","warn","pending"],
@@ -387,7 +639,7 @@ const steps = [
     id:"pool",
     phase:"PHASE A — HTF LIQUIDITY POOL",
     title:"آیا قیمت در HTF Liquidity Pool قرار دارد یا وارد آن می‌شود؟",
-    hint:"Monthly / Weekly / Daily / H4 / H1.",
+    hint:"Monthly / Weekly / Daily / H4 / H1",
     options:[
         ["No HTF Pool in Path","ok","none"],
         ["HTF Pool — Reaction Pending","bad","pending"],
@@ -399,7 +651,7 @@ const steps = [
     id:"reaction",
     phase:"PHASE A — HTF LIQUIDITY REACTION",
     title:"Liquidity چه واکنشی نشان داده؟",
-    hint:"باید Break & Acceptance یا Sweep & Reversal مشخص باشد.",
+    hint:"Break & Acceptance یا Sweep & Reversal.",
     options:[
         ["🟢 Break → Close → Hold → Acceptance","ok","acceptance"],
         ["🔥 Sweep → Rejection → Reclaim → Reversal","ok","sweep"],
@@ -412,7 +664,7 @@ const steps = [
     id:"reclaim",
     phase:"PHASE A — RECLAIM ENGINE",
     title:"آیا Reclaim معتبر ایجاد شده؟",
-    hint:"Wick ≠ Reclaim. Break/Sweep → Return → Valid Close → Hold/Reaction.",
+    hint:"Wick ≠ Reclaim",
     options:[
         ["Not Required","ok","notrequired"],
         ["🟢 Valid Bullish Reclaim","ok","bullreclaim"],
@@ -424,9 +676,9 @@ const steps = [
 
 {
     id:"location",
-    phase:"PHASE A — LOCATION",
+    phase:"PHASE A — LOCATION ENGINE",
     title:"قیمت الان کجاست؟",
-    hint:"Location باید Edge داشته باشد؛ Range Middle / EQ معمولاً No Trade است.",
+    hint:"Range Middle / EQ = No Trade.",
     options:[
         ["🟢 HTF Extreme / Major Swing","ok","good"],
         ["🟢 Liquidity Zone","ok","good"],
@@ -436,70 +688,59 @@ const steps = [
         ["🔴 Range Middle / EQ","bad","middle"],
         ["🔴 Weak Location","bad","weak"]
     ]
-},
+}
 
-/* =========================
-   MOTOR ROUTER
-   ========================= */
+];
+
+
+/* =========================================================
+   DAY TRADE ENGINE
+   ========================================================= */
+
+const daySteps = [
 
 {
-    id:"v3",
-    phase:"PHASE B — MOTOR A",
-    title:"آیا V3.6.9 Structural Opportunity وجود دارد؟",
-    hint:"Context + Location + Liquidity Event باید معتبر باشد.",
+    id:"setup",
+    phase:"🦅 DAY TRADE — V3.6.9",
+    title:"آیا V3.6.9 Structural Setup شکل گرفته؟",
+    hint:"Context + Location + Liquidity Event",
     options:[
-        ["🦅 YES — V3.6.9","ok","yes"],
+        ["🦅 YES — Structural Setup","ok","yes"],
         ["🟡 Developing","warn","developing"],
         ["🔴 NO","bad","no"]
     ]
 },
 
 {
-    id:"v5",
-    phase:"PHASE B — MOTOR B",
-    title:"آیا V5 Super Scalp Opportunity وجود دارد؟",
-    hint:"V5 می‌تواند Opportunity کوتاه‌مدت مستقل داشته باشد، اما HTF Liquidity Rule را دور نمی‌زند.",
-    options:[
-        ["⚡ YES — V5","ok","yes"],
-        ["🟡 Developing","warn","developing"],
-        ["🔴 NO","bad","no"]
-    ]
-},
-
-/* =========================
-   V3.6.9 M15
-   ========================= */
-
-{
-    id:"v3m15",
+    id:"m15",
     phase:"🦅 V3.6.9 — M15 CONFIRMATION",
     title:"M15 Confirmation چیست؟",
-    hint:"چهار مدل اصلی Confirmation.",
+    hint:"Liquidity Sweep / Displacement / Breakout Retest / Fake Breakout Reclaim",
     options:[
-        ["Sweep → MSS","ok","m1"],
-        ["Sweep → Displacement","ok","m2"],
-        ["Breakout → Retest → Hold","ok","m3"],
-        ["Fake Breakout → Reclaim → Structure","ok","m4"],
-        ["🟡 Setup Developing","warn","wait"],
-        ["🔴 Confirmation Invalid","bad","fail"]
+        ["Sweep → MSS","ok","pass"],
+        ["Sweep → Displacement","ok","pass"],
+        ["Breakout → Retest → Hold","ok","pass"],
+        ["Fake Breakout → Reclaim","ok","pass"],
+        ["🟡 Developing","warn","wait"],
+        ["🔴 Invalid","bad","fail"]
     ]
 },
 
 {
-    id:"v3m5",
+    id:"m5",
     phase:"🦅 V3.6.9 — M5 STRUCTURE",
     title:"M5 ساختار قابل معامله را ساخته است؟",
-    hint:"MSS + Displacement + BOS + Retest / Hold.",
+    hint:"MSS + Displacement + BOS + Retest / Hold",
     options:[
         ["🟢 MSS + Displacement + Hold","ok","pass"],
         ["🟢 MSS + Displacement","ok","pass"],
-        ["🟡 Structure Developing","warn","wait"],
-        ["🔴 Structure Invalid","bad","fail"]
+        ["🟡 Developing","warn","wait"],
+        ["🔴 Invalid","bad","fail"]
     ]
 },
 
 {
-    id:"v3m1",
+    id:"m1",
     phase:"🦅 V3.6.9 — M1 EXECUTION",
     title:"M1 Trigger چیست؟",
     hint:"M1 فقط Execution Trigger است.",
@@ -512,17 +753,34 @@ const steps = [
         ["🟡 Waiting","warn","wait"],
         ["🔴 Invalid","bad","fail"]
     ]
-},
+}
 
-/* =========================
-   V5
-   ========================= */
+];
+
+
+/* =========================================================
+   SUPER SCALP ENGINE
+   ========================================================= */
+
+const scalpSteps = [
 
 {
-    id:"v5m15",
-    phase:"⚡ V5 — M15 OPPORTUNITY",
-    title:"V5 در M15 چه Eventی دارد؟",
-    hint:"Liquidity / Session Event / Range Edge / Sweep / Reclaim / Short-Term Expansion.",
+    id:"setup",
+    phase:"⚡ SUPER SCALP — V5",
+    title:"آیا V5 Opportunity شکل گرفته؟",
+    hint:"M15 Location + Liquidity + Short-Term Event",
+    options:[
+        ["⚡ YES — V5 Opportunity","ok","yes"],
+        ["🟡 Developing","warn","developing"],
+        ["🔴 NO","bad","no"]
+    ]
+},
+
+{
+    id:"m15",
+    phase:"⚡ V5 — M15",
+    title:"M15 چه Eventی دارد؟",
+    hint:"Liquidity / Session Event / Range Edge / Sweep / Reclaim / Expansion",
     options:[
         ["Liquidity Event","ok","pass"],
         ["Session Event","ok","pass"],
@@ -535,10 +793,10 @@ const steps = [
 },
 
 {
-    id:"v5m5",
+    id:"m5",
     phase:"⚡ V5 — M5",
-    title:"M5 V5 Trigger Preparation چیست؟",
-    hint:"Liquidity → MSS → Displacement.",
+    title:"M5 Trigger Preparation چیست؟",
+    hint:"Liquidity → MSS → Displacement",
     options:[
         ["🟢 MSS + Displacement","ok","pass"],
         ["🟢 MSS","ok","pass"],
@@ -548,10 +806,10 @@ const steps = [
 },
 
 {
-    id:"v5m1",
+    id:"m1",
     phase:"⚡ V5 — M1 PRIMARY EXECUTION",
     title:"M1 V5 Entry Trigger چیست؟",
-    hint:"Micro Sweep → MSS → Displacement یا Break → Retest یا Sweep → Reclaim.",
+    hint:"Micro Sweep → MSS → Displacement / Break → Retest / Sweep → Reclaim",
     options:[
         ["Micro Sweep → MSS → Displacement","ok","pass"],
         ["Break → Retest → Entry","ok","pass"],
@@ -559,17 +817,22 @@ const steps = [
         ["🟡 Waiting","warn","wait"],
         ["🔴 Invalid","bad","fail"]
     ]
-},
+}
 
-/* =========================
-   ENTRY GATE
-   ========================= */
+];
+
+
+/* =========================================================
+   COMMON FINAL GATES
+   ========================================================= */
+
+const finalSteps = [
 
 {
     id:"riskfinal",
     phase:"PHASE C — ENTRY GATE",
     title:"Risk و Invalidation معتبر است؟",
-    hint:"SL باید پشت Invalidation Point باشد، نه یک عدد تصادفی.",
+    hint:"SL باید پشت Invalidation Point باشد.",
     options:[
         ["🟢 Risk Valid + SL Valid","ok","pass"],
         ["🟡 Need Better SL","warn","wait"],
@@ -581,7 +844,7 @@ const steps = [
     id:"target",
     phase:"PHASE C — TARGET ENGINE",
     title:"Target Space کافی است؟",
-    hint:"Target باید بر اساس Liquidity و Structure مشخص باشد.",
+    hint:"Target باید بر اساس Liquidity و Structure تعیین شود.",
     options:[
         ["🟢 Clear Target Space","ok","pass"],
         ["🟡 Target Possible but Tight","warn","wait"],
@@ -591,280 +854,621 @@ const steps = [
 
 ];
 
-let current = 0;
-let history = [];
-let answers = {};
+
+/* =========================================================
+   ACTIVE STEPS
+   ========================================================= */
+
+function getSteps(){
+
+    if(!mode){
+        return [];
+    }
+
+    return [
+        ...masterSteps,
+        ...(mode==="day" ? daySteps : scalpSteps),
+        ...finalSteps
+    ];
+
+}
+
+
+/* =========================================================
+   RENDER
+   ========================================================= */
 
 function render(){
 
+    const steps = getSteps();
+
     const step = steps[current];
+
+    if(!step){
+
+        evaluateFinal();
+
+        return;
+
+    }
 
     document.getElementById("progressBar").style.width =
         ((current)/(steps.length-1))*100 + "%";
 
-    let html = `
-    <div class="card">
-        <div class="phase">${step.phase}</div>
-        <div class="question">${step.title}</div>
-        <div class="hint">${step.hint}</div>
 
-        <div class="options">
+    const modeLabel =
+        mode==="day"
+        ? "🦅 DAY TRADE — V3.6.9"
+        : "⚡ SUPER SCALP — V5";
+
+
+    let html = `
+
+        <div class="card">
+
+            <div class="mode-selected">
+
+                <span class="${mode==="day" ? "mode-day":"mode-scalp"}">
+
+                    ${modeLabel}
+
+                </span>
+
+            </div>
+
+            <div class="phase">
+                ${step.phase}
+            </div>
+
+            <div class="question">
+                ${step.title}
+            </div>
+
+            <div class="hint">
+                ${step.hint}
+            </div>
+
+            <div class="options">
     `;
 
-    step.options.forEach((o,i)=>{
+
+    step.options.forEach(o=>{
+
         html += `
-        <button class="${o[1]}" onclick="answer('${o[2]}')">
-            ${o[0]}
-        </button>`;
+
+            <button
+                class="${o[1]}"
+                onclick="answer('${o[2]}')">
+
+                ${o[0]}
+
+            </button>
+
+        `;
+
     });
 
-    html += `</div>`;
-
-    if(current>0){
-        html += `
-        <div class="footer-actions">
-            <button class="back" onclick="back()">← مرحله قبل</button>
-        </div>`;
-    }
-
-    html += `</div>`;
 
     html += `
-    <div class="card">
-        <div class="phase">CURRENT STATE</div>
-        <div class="timeline">
-            <div class="node">
-                <strong>Context</strong>
-                <span>Monthly → Weekly → Daily → H4 → H1</span>
+
             </div>
-            <div class="node">
-                <strong>Liquidity</strong>
-                <span>HTF → Session → Lower TF</span>
-            </div>
-            <div class="node">
-                <strong>HTF Reaction</strong>
-                <span>Acceptance / Sweep & Reversal</span>
-            </div>
-            <div class="node">
-                <strong>Opportunity Engines</strong>
-                <span>V3.6.9 + V5</span>
-            </div>
-        </div>
-    </div>
+
     `;
 
+
+    if(current>0){
+
+        html += `
+
+            <div class="footer-actions">
+
+                <button
+                    class="back"
+                    onclick="back()">
+
+                    ← مرحله قبل
+
+                </button>
+
+            </div>
+
+        `;
+
+    }
+
+
+    html += `
+
+        </div>
+
+        <div class="card">
+
+            <div class="phase">
+                MASTER SYSTEM
+            </div>
+
+            <div class="timeline">
+
+                <div class="node">
+                    <strong>Context</strong>
+                    <span>
+                        Monthly → Weekly → Daily → H4 → H1
+                    </span>
+                </div>
+
+                <div class="node">
+                    <strong>Liquidity</strong>
+                    <span>
+                        HTF + Session + Lower TF
+                    </span>
+                </div>
+
+                <div class="node">
+                    <strong>HTF Reaction</strong>
+                    <span>
+                        Acceptance / Sweep & Reversal
+                    </span>
+                </div>
+
+                <div class="node">
+                    <strong>
+                        ${mode==="day"
+                            ? "V3.6.9 Structural Engine"
+                            : "V5 Super Scalp Engine"}
+                    </strong>
+
+                    <span>
+                        M15 → M5 → M1
+                    </span>
+
+                </div>
+
+                <div class="node">
+                    <strong>Entry Gate</strong>
+                    <span>
+                        Risk + SL + Target Space
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+    `;
+
+
     document.getElementById("app").innerHTML = html;
+
 }
+
+
+/* =========================================================
+   ANSWER
+   ========================================================= */
 
 function answer(value){
 
-    answers[steps[current].id] = value;
+    const steps = getSteps();
+
+    const step = steps[current];
+
+    answers[step.id] = value;
+
     history.push(current);
+
 
     /* HARD STOPS */
 
-    if(steps[current].id==="trades" && value==="closed"){
+
+    if(step.id==="trades" && value==="closed"){
+
         return finalState(
             "🔴",
             "NO TRADE",
-            "3 Trades Completed — Trading Day Closed",
-            "حداکثر Daily Trades تکمیل شده است."
+            "3 Trades Completed",
+            "Trading Day Closed — هیچ موتور دیگری اجازه Entry ندارد."
         );
+
     }
 
-    if(steps[current].id==="risk" && value==="stop"){
+
+    if(step.id==="risk" && value==="stop"){
+
         return finalState(
             "🔴",
             "NO TRADE",
-            "2 Consecutive Losses — STOP FOR THE DAY",
-            "هیچ‌کدام از دو موتور اجازه Entry ندارند."
+            "2 Consecutive Losses",
+            "STOP FOR THE DAY — هر دو موتور متوقف هستند."
         );
+
     }
 
-    if(steps[current].id==="h4" && value==="transition"){
+
+    if(step.id==="h4" && value==="transition"){
+
         return finalState(
             "🔴",
             "NO TRADE",
             "H4 TRANSITION",
-            "H4 Context هنوز تأیید نشده است."
+            "Context جدید هنوز تأیید نشده است."
         );
+
     }
 
-    if(steps[current].id==="h1" && value==="unclear"){
+
+    if(step.id==="h1" && value==="unclear"){
+
         return finalState(
             "🔴",
             "NO TRADE",
             "H1 STRUCTURE UNCLEAR",
             "Context کافی برای ادامه وجود ندارد."
         );
+
     }
 
-    if(steps[current].id==="liquidity" && value==="unclear"){
+
+    if(step.id==="liquidity" && value==="unclear"){
+
         return finalState(
             "🔴",
             "NO TRADE",
             "LIQUIDITY UNCLEAR",
             "Liquidity Map قابل اعتماد نیست."
         );
+
     }
 
-    if(steps[current].id==="pool" && value==="pending"){
+
+    if(step.id==="pool" && value==="pending"){
+
         return finalState(
             "🟡",
             "WAIT — HTF LIQUIDITY REACTION PENDING",
-            "No Entry",
-            "تا Break & Acceptance یا Sweep & Reversal مشخص نشود، Entry ممنوع است."
+            "NO ENTRY",
+            "تا Break & Acceptance یا Sweep & Reversal مشخص نشود Entry ممنوع است."
         );
+
     }
 
-    if(steps[current].id==="reaction" &&
-       (value==="pending" || value==="invalid")){
+
+    if(
+        step.id==="reaction" &&
+        (value==="pending" || value==="invalid")
+    ){
+
         return finalState(
             value==="pending" ? "🟡":"🔴",
-            value==="pending" ?
-            "WAIT — SETUP DEVELOPING" :
-            "NO TRADE",
-            "HTF Liquidity Reaction",
+            value==="pending"
+                ? "WAIT — HTF LIQUIDITY REACTION PENDING"
+                : "NO TRADE",
+            "HTF LIQUIDITY REACTION",
             "Liquidity هنوز تعیین تکلیف نشده است."
         );
+
     }
 
-    if(steps[current].id==="location" &&
-       (value==="middle" || value==="weak")){
+
+    if(
+        step.id==="location" &&
+        (value==="middle" || value==="weak")
+    ){
+
         return finalState(
             "🔴",
             "NO TRADE",
             "BAD LOCATION",
             "Range Middle / EQ یا Location ضعیف."
         );
+
     }
 
-    if(steps[current].id==="reclaim" &&
-       (value==="incomplete" || value==="wick")){
+
+    if(
+        step.id==="reclaim" &&
+        (value==="incomplete" || value==="wick")
+    ){
+
         return finalState(
             "🟡",
             "WAIT — RECLAIM INCOMPLETE",
-            "Wick ≠ Reclaim",
+            "WICK ≠ RECLAIM",
             "Reclaim معتبر نیازمند Valid Close و Hold / Reaction است."
         );
+
     }
 
-    if(steps[current].id==="ctl" && value==="invalid"){
+
+    if(step.id==="ctl" && value==="invalid"){
+
         return finalState(
             "🔴",
             "NO TRADE",
             "INVALID COUNTER-TREND",
             "Counter-Trend شرایط لازم را ندارد."
         );
+
     }
 
-    current++;
 
-    if(current >= steps.length){
-        evaluateFinal();
-    }else{
-        render();
+    /* DEVELOPING STATES */
+
+    if(
+        (step.id==="setup" ||
+         step.id==="m15" ||
+         step.id==="m5" ||
+         step.id==="m1")
+        &&
+        (value==="developing" ||
+         value==="wait")
+    ){
+
+        return finalState(
+            "🟡",
+            "WAIT — SETUP DEVELOPING",
+            mode==="day"
+                ? "V3.6.9"
+                : "V5 SUPER SCALP",
+            "Setup هنوز کامل نشده است. Assistant هیچ مرحله‌ای را جعل نمی‌کند."
+        );
+
     }
-}
 
-function back(){
 
-    if(history.length===0) return;
+    /* INVALID ENGINE */
 
-    current = history.pop();
+    if(
+        step.id==="setup" &&
+        value==="no"
+    ){
 
-    render();
-}
+        return finalState(
+            "🔴",
+            "NO TRADE",
+            mode==="day"
+                ? "NO V3.6.9 SETUP"
+                : "NO V5 OPPORTUNITY",
+            "Opportunity معتبر وجود ندارد."
+        );
 
-function evaluateFinal(){
+    }
 
-    const v3 = answers.v3;
-    const v5 = answers.v5;
 
-    const v3Ready =
-        v3==="yes" &&
-        ["m1","m2","m3","m4"].includes(answers.v3m15) &&
-        answers.v3m5==="pass" &&
-        answers.v3m1==="pass";
+    if(
+        step.id==="m15" &&
+        value==="fail"
+    ){
 
-    const v5Ready =
-        v5==="yes" &&
-        answers.v5m15==="pass" &&
-        answers.v5m5==="pass" &&
-        answers.v5m1==="pass";
+        return finalState(
+            "🔴",
+            "NO TRADE",
+            "M15 CONFIRMATION INVALID",
+            "Confirmation معتبر نیست."
+        );
 
-    if(answers.riskfinal!=="pass"){
+    }
+
+
+    if(
+        step.id==="m5" &&
+        value==="fail"
+    ){
+
+        return finalState(
+            "🔴",
+            "NO TRADE",
+            "M5 STRUCTURE INVALID",
+            "ساختار قابل معامله شکل نگرفته است."
+        );
+
+    }
+
+
+    if(
+        step.id==="m1" &&
+        value==="fail"
+    ){
+
+        return finalState(
+            "🔴",
+            "NO TRADE",
+            "M1 TRIGGER INVALID",
+            "Execution Trigger وجود ندارد."
+        );
+
+    }
+
+
+    if(
+        step.id==="riskfinal" &&
+        value!=="pass"
+    ){
+
         return finalState(
             "🔴",
             "NO TRADE",
             "RISK INVALID",
             "Risk یا Invalidation Point معتبر نیست."
         );
+
     }
 
-    if(answers.target!=="pass"){
+
+    if(
+        step.id==="target" &&
+        value!=="pass"
+    ){
+
         return finalState(
             "🔴",
             "NO TRADE",
             "TARGET SPACE INSUFFICIENT",
             "فضای کافی تا Target وجود ندارد."
         );
+
     }
 
-    if(v3Ready && v5Ready){
+
+    current++;
+
+
+    if(current >= steps.length){
+
+        evaluateFinal();
+
+    }else{
+
+        render();
+
+    }
+
+}
+
+
+/* =========================================================
+   BACK
+   ========================================================= */
+
+function back(){
+
+    if(history.length===0){
+
+        return;
+
+    }
+
+    current = history.pop();
+
+    render();
+
+}
+
+
+/* =========================================================
+   FINAL EVALUATION
+   ========================================================= */
+
+function evaluateFinal(){
+
+    const engine =
+        mode==="day"
+        ? "V3.6.9"
+        : "V5";
+
+
+    const engineReady =
+        answers.setup==="yes" &&
+        answers.m15==="pass" &&
+        answers.m5==="pass" &&
+        answers.m1==="pass" &&
+        answers.riskfinal==="pass" &&
+        answers.target==="pass";
+
+
+    if(!engineReady){
+
         return finalState(
-            "🔥",
-            "DUAL OPPORTUNITY",
-            "V3.6.9 + V5 SUPER SCALP",
-            "هر دو موتور Entry معتبر دارند و Risk Engine مشترک اعمال می‌شود."
+            "🔴",
+            "NO TRADE",
+            engine,
+            "تمام شروط Entry Gate به‌صورت کامل تأیید نشده‌اند."
         );
+
     }
 
-    if(v3Ready){
+
+    if(mode==="day"){
+
         return finalState(
             "🟢",
             "V3.6.9 ENTRY READY",
             "STRUCTURAL SNIPER",
-            "تمام Gates اصلی V3.6.9 عبور کرده‌اند."
+            "Context + Liquidity + Confirmation + M5 Structure + M1 Trigger + Risk + Target Space تأیید شده است."
         );
+
     }
 
-    if(v5Ready){
-        return finalState(
-            "🟢",
-            "V5 SUPER SCALP ENTRY READY",
-            "SHORT-TERM OPPORTUNITY",
-            "تمام Gates اصلی V5 عبور کرده‌اند."
-        );
-    }
 
     return finalState(
-        "🟡",
-        "WAIT — SETUP DEVELOPING",
-        "No Valid Entry Yet",
-        "هیچ‌کدام از دو موتور هنوز Entry کامل و معتبر ندارند."
+        "🟢",
+        "V5 SUPER SCALP ENTRY READY",
+        "SUPER SCALP",
+        "M15 Event + M5 MSS/Displacement + M1 Trigger + HTF Liquidity Rule + Risk تأیید شده است."
     );
+
 }
 
-function finalState(icon,title,subtitle,text){
+
+/* =========================================================
+   FINAL SCREEN
+   ========================================================= */
+
+function finalState(
+    icon,
+    title,
+    subtitle,
+    text
+){
 
     document.getElementById("progressBar").style.width="100%";
 
+
+    const modeLabel =
+        mode==="day"
+        ? "🦅 DAY TRADE — V3.6.9"
+        : mode==="scalp"
+        ? "⚡ SUPER SCALP — V5"
+        : "🦅 SNIPER GOD'S PLAN";
+
+
     document.getElementById("app").innerHTML = `
+
         <div class="card state">
 
-            <div class="icon">${icon}</div>
+            <div class="mode-selected">
 
-            <h2>${title}</h2>
+                <span class="${
+                    mode==="day"
+                    ? "mode-day"
+                    : "mode-scalp"
+                }">
 
-            <div class="phase">${subtitle}</div>
+                    ${modeLabel}
 
-            <p class="${title.includes("NO TRADE") ? "red" :
-                       title.includes("WAIT") ? "yellow" :
-                       title.includes("DUAL") ? "orange" :
-                       "green"}">
+                </span>
+
+            </div>
+
+
+            <div class="icon">
+                ${icon}
+            </div>
+
+
+            <h2>
+                ${title}
+            </h2>
+
+
+            <div class="phase">
+                ${subtitle}
+            </div>
+
+
+            <p class="${
+                title.includes("NO TRADE")
+                ? "red"
+                : title.includes("WAIT")
+                ? "yellow"
+                : title.includes("DUAL")
+                ? "orange"
+                : "green"
+            }">
+
                 ${text}
+
             </p>
+
 
             <div class="summary">
 
@@ -885,37 +1489,83 @@ function finalState(icon,title,subtitle,text){
 
             </div>
 
+
             <div class="footer-actions">
-                <button class="primary" onclick="restart()">
+
+                <button
+                    class="primary"
+                    onclick="restart()">
+
                     🔄 بررسی جدید
+
                 </button>
+
             </div>
 
         </div>
+
 
         <div class="card">
-            <div class="phase">MASTER PRINCIPLE</div>
-            <div class="hint">
-                No Context → No Trade<br>
-                No Location → No Trade<br>
-                No Liquidity Reaction → No Trade<br>
-                No Confirmation → No Trade<br>
-                No Target Space → No Trade<br>
-                No Risk Validity → No Trade<br>
-                No Setup → No Trade
+
+            <div class="phase">
+                🔒 MASTER NO-TRADE ENGINE
             </div>
+
+            <div class="hint">
+
+                No Context → No Trade
+                <br>
+
+                No Location → No Trade
+                <br>
+
+                No Liquidity Reaction → No Trade
+                <br>
+
+                No Confirmation → No Trade
+                <br>
+
+                No Target Space → No Trade
+                <br>
+
+                No Risk Validity → No Trade
+                <br>
+
+                No Setup → No Trade
+
+            </div>
+
         </div>
+
     `;
+
 }
+
+
+/* =========================================================
+   RESTART
+   ========================================================= */
 
 function restart(){
+
+    mode=null;
+
     current=0;
+
     history=[];
+
     answers={};
-    render();
+
+    renderModeSelector();
+
 }
 
-render();
+
+/* =========================================================
+   START
+   ========================================================= */
+
+renderModeSelector();
 
 </script>
 
