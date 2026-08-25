@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -124,27 +124,16 @@ body{
     margin-bottom:18px;
 }
 
-.question .tf{
-    color:#4d91ff;
-    font-size:12px;
-    display:block;
-    margin-bottom:5px;
-    letter-spacing:.4px;
-}
-
-.question .mainq{
-    display:block;
-}
-
 .multiHint{
-    margin:-8px 0 16px;
-    padding:10px 12px;
-    border-radius:8px;
-    background:#101d31;
-    border:1px solid #28466e;
-    color:#8fbaff;
-    font-size:12px;
-    line-height:1.55;
+    display:inline-block;
+    margin-top:7px;
+    padding:6px 10px;
+    border-radius:7px;
+    background:#10213a;
+    border:1px solid #28558d;
+    color:#9fc5ff;
+    font-size:11px;
+    font-weight:normal;
 }
 
 .options{
@@ -161,8 +150,7 @@ body{
     border-radius:11px;
     cursor:pointer;
     transition:.18s;
-    text-align:left;
-    user-select:none;
+    text-align:right;
 }
 
 .option:hover{
@@ -174,10 +162,6 @@ body{
     border-color:#4d91ff;
     background:#12294a;
     box-shadow:0 0 0 1px rgba(77,145,255,.15);
-}
-
-.option.exclusive{
-    border-color:#9c3434;
 }
 
 .option strong{
@@ -286,7 +270,7 @@ button{
     padding:14px;
     border-radius:10px;
     margin:12px 0;
-    line-height:1.6;
+    line-height:1.7;
     font-size:13px;
 }
 
@@ -366,7 +350,7 @@ table{
 th,td{
     padding:10px;
     border-bottom:1px solid #243044;
-    text-align:left;
+    text-align:right;
     font-size:12px;
 }
 
@@ -393,7 +377,7 @@ summary{
     padding:0 14px 15px;
     color:#9aa6b8;
     font-size:13px;
-    line-height:1.7;
+    line-height:1.8;
 }
 
 .tree{
@@ -406,6 +390,8 @@ summary{
     line-height:1.65;
     color:#c7d5ea;
     white-space:pre;
+    direction:ltr;
+    text-align:left;
 }
 
 .footer{
@@ -432,21 +418,39 @@ summary{
 <div class="app">
 
 <header class="header">
+
     <div class="logo">🦅 SNIPER GOD'S PLAN</div>
-    <div class="subtitle">V3.6.9 — STRUCTURAL SNIPER + V5 SUPER SCALP</div>
+
+    <div class="subtitle">
+        V3.6.9 — STRUCTURAL SNIPER + V5 SUPER SCALP
+    </div>
 
     <div class="motto">
-        Trust the process — it is all part of the journey and God's plan
-        to make you a better and stronger person. Be patient, follow the plan,
-        and do not be afraid.
+        Trust the process. It's all just part of the journey and God's plan
+        to make you a better and stronger person. Be patient, follow God's plan,
+        and don't be scared.
     </div>
 
     <div class="statusbar">
-        <div id="modeBadge" class="badge">MODE: NOT SELECTED</div>
-        <div id="sessionBadge" class="badge">SESSION: NOT SELECTED</div>
-        <div id="tradeBadge" class="badge">TRADES: 0 / 3</div>
-        <div id="riskBadge" class="badge">RISK: ACTIVE</div>
+
+        <div id="modeBadge" class="badge">
+            MODE: NOT SELECTED
+        </div>
+
+        <div id="sessionBadge" class="badge">
+            SESSION: NOT SELECTED
+        </div>
+
+        <div id="tradeBadge" class="badge">
+            TRADES: 0 / 3
+        </div>
+
+        <div id="riskBadge" class="badge">
+            RISK: ACTIVE
+        </div>
+
     </div>
+
 </header>
 
 
@@ -459,15 +463,15 @@ summary{
     <h2>🔒 DAILY PREPARATION</h2>
 
     <div class="description">
-        قبل از ورود به سیستم معاملاتی، آماده‌سازی روزانه باید کامل شود.
-        هر سه مورد اجباری هستند. اگر حتی یکی از آنها انجام نشده باشد،
-        Assistant اجازه ورود به مرحله بعد را نمی‌دهد.
+        قبل از شروع سیستم، هر سه مرحله Daily Preparation باید انجام شده باشد.
+        اگر حتی یکی از مراحل کامل نشده باشد، سیستم اجازه ورود به مرحله بعد را نمی‌دهد.
     </div>
 
     <div class="checklist">
 
         <label class="check">
             <input type="checkbox" id="gratitude">
+
             <span>
                 <strong>🙏 Daily Gratitude</strong><br>
                 شکرگزاری روزانه را انجام داده‌ام.
@@ -476,6 +480,7 @@ summary{
 
         <label class="check">
             <input type="checkbox" id="focus333">
+
             <span>
                 <strong>🧠 3:33 Focus Exercise</strong><br>
                 تمرین تمرکز 3:33 را انجام داده‌ام.
@@ -484,6 +489,7 @@ summary{
 
         <label class="check">
             <input type="checkbox" id="meditation">
+
             <span>
                 <strong>🧘 Meditation</strong><br>
                 مدیتیشن روزانه را انجام داده‌ام.
@@ -520,21 +526,25 @@ summary{
 
         <div class="option" onclick="selectSession('London',this)">
             <strong>🇬🇧 LONDON</strong>
-            <small>London Trading Session</small>
+            <small>London Trading Hours</small>
         </div>
 
         <div class="option" onclick="selectSession('New York',this)">
             <strong>🇺🇸 NEW YORK</strong>
-            <small>New York Trading Session</small>
+            <small>New York Trading Hours</small>
         </div>
 
     </div>
 
     <div id="sessionMessage" class="alert info">
-        Select the current trading session.
+        Session فعلی را انتخاب کن.
     </div>
 
-    <button id="sessionContinue" class="btn primary" disabled onclick="goToMode()">
+    <button
+        id="sessionContinue"
+        class="btn primary"
+        disabled
+        onclick="goToMode()">
         CONTINUE →
     </button>
 
@@ -550,33 +560,44 @@ summary{
     <h2>⚔️ SELECT TRADING MODE</h2>
 
     <div class="description">
-        ابتدا موتور معاملاتی موردنظر را انتخاب کن.
-        Day Trade از V3.6.9 Structural Sniper استفاده می‌کند.
-        Super Scalp موتور سریع V5 را اجرا می‌کند.
+        موتور معاملاتی موردنظر را انتخاب کن.
+        V3.6.9 برای Structural Sniper و V5 برای Super Scalp است.
     </div>
 
     <div class="options">
 
         <div class="option" onclick="selectMode('DAY',this)">
+
             <strong>🦅 DAY TRADE — V3.6.9</strong>
+
             <small>
-                Structural Sniper — Context → Structure → Liquidity →
-                Location → Confirmation → Execution
+                Context → Structure → Liquidity → Location →
+                Confirmation → Execution → Management
             </small>
+
         </div>
 
         <div class="option" onclick="selectMode('SCALP',this)">
+
             <strong>⚡ SUPER SCALP — V5</strong>
+
             <small>
-                Fast opportunity engine — تمرکز روی Immediate Liquidity،
-                M1 Structure و Fast Execution.
+                Immediate Liquidity → Event → M1 Structure →
+                Trigger → Tight SL → Nearby Target
             </small>
+
         </div>
 
     </div>
 
-    <button id="modeContinue" class="btn primary" disabled onclick="startSystem()">
+    <button
+        id="modeContinue"
+        class="btn primary"
+        disabled
+        onclick="startSystem()">
+
         ENTER SYSTEM →
+
     </button>
 
 </section>
@@ -588,7 +609,9 @@ summary{
 
 <section id="assistantSection" class="card hidden">
 
-    <h2 id="assistantTitle">TRADING ASSISTANT</h2>
+    <h2 id="assistantTitle">
+        TRADING ASSISTANT
+    </h2>
 
     <div class="progress">
         <div id="progressBar"></div>
@@ -602,15 +625,25 @@ summary{
 
     <div class="btnrow">
 
-        <button id="backBtn" class="btn" onclick="previousStep()">
+        <button
+            id="backBtn"
+            class="btn"
+            onclick="previousStep()">
             ← BACK
         </button>
 
-        <button id="resetBtn" class="btn danger" onclick="resetPlan()">
+        <button
+            id="resetBtn"
+            class="btn danger"
+            onclick="resetPlan()">
             🔄 RESET PLAN
         </button>
 
-        <button id="nextBtn" class="btn primary" onclick="nextStep()" disabled>
+        <button
+            id="nextBtn"
+            class="btn primary"
+            onclick="nextStep()"
+            disabled>
             NEXT →
         </button>
 
@@ -628,61 +661,84 @@ summary{
     <h2>📓 TRADE JOURNAL</h2>
 
     <div class="description">
-        هر معامله‌ای که انجام می‌دهی اینجا ثبت می‌شود.
-        اطلاعات در مرورگر ذخیره می‌شود تا با Refresh شدن صفحه از بین نرود.
+        اطلاعات هر معامله در مرورگر ذخیره می‌شود.
     </div>
 
     <div class="grid">
 
         <div>
             <label class="description">Direction</label>
-            <input id="jDirection" type="text" placeholder="LONG / SHORT">
+            <input
+                id="jDirection"
+                type="text"
+                placeholder="LONG / SHORT">
         </div>
 
         <div>
             <label class="description">Entry</label>
-            <input id="jEntry" type="number" step="any">
+            <input
+                id="jEntry"
+                type="number"
+                step="any">
         </div>
 
         <div>
             <label class="description">SL</label>
-            <input id="jSL" type="number" step="any">
+            <input
+                id="jSL"
+                type="number"
+                step="any">
         </div>
 
         <div>
             <label class="description">TP</label>
-            <input id="jTP" type="number" step="any">
+            <input
+                id="jTP"
+                type="number"
+                step="any">
         </div>
 
         <div>
             <label class="description">Result / R</label>
-            <input id="jResult" type="text" placeholder="WIN +1R / LOSS -1R">
+            <input
+                id="jResult"
+                type="text"
+                placeholder="WIN +1R / LOSS -1R">
         </div>
 
     </div>
 
     <br>
 
-    <label class="description">Setup / Reason / Notes</label>
+    <label class="description">
+        Setup / Reason / Notes
+    </label>
 
-    <textarea id="jNotes"
-              placeholder="Reason for trade..."></textarea>
+    <textarea
+        id="jNotes"
+        placeholder="Reason for trade..."></textarea>
 
     <div class="btnrow">
 
-        <button class="btn success" onclick="addTrade()">
+        <button
+            class="btn success"
+            onclick="addTrade()">
             + SAVE TRADE
         </button>
 
-        <button class="btn danger" onclick="clearJournal()">
+        <button
+            class="btn danger"
+            onclick="clearJournal()">
             CLEAR JOURNAL
         </button>
 
     </div>
 
-    <div id="journalTable"
-         class="tablewrap"
-         style="margin-top:20px"></div>
+    <div
+        id="journalTable"
+        class="tablewrap"
+        style="margin-top:20px">
+    </div>
 
 </section>
 
@@ -696,63 +752,57 @@ summary{
     <h2>📖 FULL PLAYBOOK</h2>
 
     <div class="description">
-        این بخش مرجع داخلی SNIPER GOD'S PLAN است.
-        اگر در هر مرحله نیاز به توضیح داشتی، قوانین مربوط به همان بخش را بررسی کن.
+        مرجع داخلی SNIPER GOD'S PLAN.
     </div>
 
     <details>
-        <summary>🔒 PART 0 — MASTER LAW</summary>
+
+        <summary>
+            🔒 PART 0 — MASTER LAW
+        </summary>
 
         <div class="detailbody">
 
             SNIPER GOD'S PLAN از دو موتور مستقل تشکیل شده است:
-            V3.6.9 Structural Sniper و V5 Super Scalp.
 
             <br><br>
 
-            هر دو موتور از Risk Engine مشترک استفاده می‌کنند.
+            V3.6.9 Structural Sniper<br>
+            V5 Super Scalp
 
             <br><br>
 
-            Maximum Daily Trades = 3
-
-            <br>
-
+            Maximum Daily Trades = 3<br>
             2 Consecutive Losses → STOP FOR THE DAY
 
         </div>
+
     </details>
 
+
     <details>
-        <summary>🧠 V3.6.9 — MASTER ARCHITECTURE</summary>
+
+        <summary>
+            🧠 V3.6.9 — MASTER ARCHITECTURE
+        </summary>
 
         <div class="detailbody">
 
-            Context
-            →
-            Structure
-            →
-            Liquidity
-            →
-            HTF Liquidity Reaction
-            →
-            Location
-            →
-            Setup
-            →
-            Confirmation
-            →
-            Execution
-            →
-            Management
-            →
-            Exit
+            Context → Structure → Liquidity →
+            HTF Liquidity Reaction → Location →
+            Setup → Confirmation → Execution →
+            Management → Exit
 
         </div>
+
     </details>
 
+
     <details>
-        <summary>🌐 HTF CONTEXT</summary>
+
+        <summary>
+            🌐 HTF CONTEXT
+        </summary>
 
         <div class="detailbody">
 
@@ -760,38 +810,34 @@ summary{
 
             <br><br>
 
-            H4 Bullish = HH → HL → HH
-
-            <br>
-
-            H4 Bearish = LL → LH → LL
-
-            <br>
-
-            H4 Range = Valid Range Structure
-
-            <br>
-
-            H4 Transition = Previous Structure Broken
-            + New Structure Not Confirmed
+            H4 Bullish = HH → HL → HH<br>
+            H4 Bearish = LL → LH → LL<br>
+            H4 Range = Valid Range Structure<br>
+            H4 Transition = Previous Structure Broken +
+            New Structure Not Confirmed
 
             <br><br>
 
-            Transition = NO TRADE CONTEXT
+            H4 Transition = NO TRADE CONTEXT
 
         </div>
+
     </details>
 
+
     <details>
-        <summary>🔄 H1 CORRECTION / COUNTER-TREND</summary>
+
+        <summary>
+            🔄 H1 CORRECTION / COUNTER-TREND
+        </summary>
 
         <div class="detailbody">
 
-            اگر H4 و H1 هم‌جهت باشند، Alignment داریم.
+            اگر H4 و H1 هم‌جهت باشند → Alignment.
 
             <br><br>
 
-            اگر H4 Bullish و H1 Bearish باشد،
+            اگر H4 Bullish و H1 Bearish باشد →
             H1 Correction فعال است.
 
             <br><br>
@@ -800,30 +846,24 @@ summary{
 
             <br><br>
 
-            Touch #1 = Context Only
-
-            <br>
-
-            Touch #2 = Critical Event
-
-            <br>
-
+            Touch #1 = Context Only<br>
+            Touch #2 = Critical Event<br>
             Touch #3 = Quality Enhancement
 
             <br><br>
 
             Touch به‌تنهایی Entry نیست.
 
-            <br>
-
-            Touch #2 زمانی اهمیت دارد که در جهت Correction شکل گرفته
-            و Triggerهای لازم نیز وجود داشته باشند.
-
         </div>
+
     </details>
 
+
     <details>
-        <summary>💧 LIQUIDITY MAP</summary>
+
+        <summary>
+            💧 LIQUIDITY MAP
+        </summary>
 
         <div class="detailbody">
 
@@ -833,6 +873,7 @@ summary{
             Previous Day High / Low<br>
             H4 Major Swing High / Low<br>
             H1 Major Swing High / Low<br>
+            Daily Swing High / Low<br>
             Asia High / Low<br>
             London High / Low<br>
             New York High / Low<br>
@@ -844,30 +885,29 @@ summary{
             Range High / Low
 
         </div>
+
     </details>
 
+
     <details>
-        <summary>🔥 HTF LIQUIDITY REACTION</summary>
+
+        <summary>
+            🔥 HTF LIQUIDITY REACTION
+        </summary>
 
         <div class="detailbody">
 
             وقتی قیمت وارد HTF Liquidity Pool می‌شود،
-            تا زمانی که واکنش مشخص نشود، Entry ممنوع است.
+            تا مشخص شدن واکنش Entry ممنوع است.
 
             <br><br>
 
-            MODEL A:
-
-            <br>
-
+            MODEL A:<br>
             Break → Close Beyond → Hold → Acceptance
 
             <br><br>
 
-            MODEL B:
-
-            <br>
-
+            MODEL B:<br>
             Sweep → Rejection → Reclaim → Reversal Confirmation
 
             <br><br>
@@ -875,31 +915,24 @@ summary{
             Reaction Pending = WAIT
 
         </div>
+
     </details>
 
+
     <details>
-        <summary>🔄 RECLAIM</summary>
+
+        <summary>
+            🔄 RECLAIM
+        </summary>
 
         <div class="detailbody">
 
-            Break / Sweep
-
-            <br>
-            ↓
-            <br>
-
-            Return
-
-            <br>
-            ↓
-            <br>
-
-            Valid Close
-
-            <br>
-            ↓
-            <br>
-
+            Break / Sweep<br>
+            ↓<br>
+            Return<br>
+            ↓<br>
+            Valid Close<br>
+            ↓<br>
             Hold / Reaction
 
             <br><br>
@@ -907,23 +940,27 @@ summary{
             Wick ≠ Reclaim
 
         </div>
+
     </details>
 
+
     <details>
-        <summary>📍 LOCATION ENGINE</summary>
+
+        <summary>
+            📍 LOCATION ENGINE
+        </summary>
 
         <div class="detailbody">
 
-            Good Location:
+            در Location می‌توان چند عامل هم‌زمان وجود داشته باشد.
 
             <br><br>
 
             HTF Extreme<br>
-            Daily / Weekly / Monthly Swing<br>
+            Daily Swing<br>
             Previous Day High / Low<br>
-            Liquidity Zone<br>
-            Range High<br>
-            Range Low<br>
+            Session Liquidity<br>
+            Range High / Low<br>
             Supply / Demand<br>
             Major Swing<br>
             Reversal Zone<br>
@@ -935,60 +972,53 @@ summary{
 
             Range Middle / EQ = NO TRADE
 
-            <br><br>
-
-            مگر اینکه Breakout معتبر
-            + Acceptance
-            + Confirmation ایجاد شده باشد.
-
         </div>
+
     </details>
 
+
     <details>
-        <summary>🦅 V3.6.9 M15 CONFIRMATION</summary>
+
+        <summary>
+            🦅 V3.6.9 M15 CONFIRMATION
+        </summary>
 
         <div class="detailbody">
 
-            MODEL 1:
-
-            <br>
-
+            MODEL 1:<br>
             Liquidity Sweep → Rejection → MSS
 
             <br><br>
 
-            MODEL 2:
-
-            <br>
-
-            Sweep → Strong Displacement → Close → Structure Shift
+            MODEL 2:<br>
+            Sweep → Strong Displacement →
+            Close → Structure Shift
 
             <br><br>
 
-            MODEL 3:
-
-            <br>
-
+            MODEL 3:<br>
             Breakout → Close Beyond → Retest → Hold
 
             <br><br>
 
-            MODEL 4:
-
-            <br>
-
-            Fake Breakout → Failure → Return → Reclaim → Structure Confirmation
+            MODEL 4:<br>
+            Fake Breakout → Failure → Return →
+            Reclaim → Structure Confirmation
 
         </div>
+
     </details>
 
+
     <details>
-        <summary>🟦 V3.6.9 M5</summary>
+
+        <summary>
+            🟦 V3.6.9 M5
+        </summary>
 
         <div class="detailbody">
 
-            M5 وظیفه دارد Confirmation را
-            به ساختار قابل معامله تبدیل کند.
+            M5 وظیفه دارد Confirmation را به ساختار قابل معامله تبدیل کند.
 
             <br><br>
 
@@ -1002,23 +1032,24 @@ summary{
 
             Sequence ایده‌آل:
 
-            <br>
+            <br><br>
 
-            M15 Confirmation
-            →
-            M5 MSS
-            →
-            M5 Displacement
-            →
-            Retest / Hold
-            →
-            M1
+            M15 Confirmation →
+            M5 MSS →
+            M5 Displacement →
+            Retest / Hold →
+            M1 Trigger
 
         </div>
+
     </details>
 
+
     <details>
-        <summary>🎯 V3.6.9 M1</summary>
+
+        <summary>
+            🎯 V3.6.9 M1
+        </summary>
 
         <div class="detailbody">
 
@@ -1026,83 +1057,52 @@ summary{
 
             <br><br>
 
-            Break → Retest → Trigger
-
-            <br>
-
-            Engulfing Trigger
-
-            <br>
-
-            M1 MSS
-
-            <br>
-
-            M1 Displacement
-
-            <br>
-
+            Break → Retest → Trigger<br>
+            Engulfing Trigger<br>
+            M1 MSS<br>
+            M1 Displacement<br>
             Micro Sweep → Reclaim → Trigger
 
         </div>
+
     </details>
 
+
     <details>
-        <summary>⚡ V5 SUPER SCALP</summary>
+
+        <summary>
+            ⚡ V5 SUPER SCALP
+        </summary>
 
         <div class="detailbody">
 
-            V5 برای تصمیم‌گیری سریع و شکار حرکات کوتاه طراحی شده است.
+            V5 برای حرکات کوتاه و سریع طراحی شده است.
 
             <br><br>
 
-            V5 نیاز به عبور کامل از ساختار HTF ندارد.
-
-            <br>
-
-            HTF Hard Filter فعال نیست.
-
-            <br>
-
-            M5 مرحله اجباری نیست.
+            HTF Hard Filter فعال نیست.<br>
+            M5 اجباری نیست.
 
             <br><br>
 
-            تمرکز اصلی:
-
-            <br>
-
-            Session
-            →
-            Immediate Liquidity
-            →
-            Sweep / Break
-            →
-            Reclaim / MSS
-            →
-            M1 Displacement
-            →
-            Trigger
-            →
-            Entry
-
-            <br><br>
-
-            Target = Nearby Liquidity
-
-            <br>
-
-            SL = Tight + Behind Invalidation Point
-
-            <br>
-
-            Management = Fast
+            Session →
+            Immediate Location →
+            Liquidity Event →
+            M1 Structure →
+            M1 Trigger →
+            Tight SL →
+            Nearby Target
 
         </div>
+
     </details>
 
+
     <details>
-        <summary>🛑 MASTER NO-TRADE</summary>
+
+        <summary>
+            🛑 MASTER NO-TRADE
+        </summary>
 
         <div class="detailbody">
 
@@ -1111,7 +1111,7 @@ summary{
             H1 Structure نامشخص<br>
             Range Middle<br>
             Liquidity نامشخص<br>
-            HTF Reaction Pending در V3.6.9<br>
+            HTF Reaction Pending<br>
             Location ضعیف<br>
             Confirmation ناقص<br>
             M5 Structure ناقص در V3.6.9<br>
@@ -1124,6 +1124,7 @@ summary{
             2 Consecutive Losses
 
         </div>
+
     </details>
 
 </section>
@@ -1138,12 +1139,13 @@ summary{
     <h2>🧭 DECISION TREE</h2>
 
     <div class="tree">
-🦅 SNIPER GOD'S PLAN
+
+SNIPER GOD'S PLAN
 
 DAILY PREPARATION
        │
        ├── 3 CHECKS COMPLETE?
-       │       └── NO → 🔴 LOCK
+       │       └── NO → LOCK
        │
        ▼
 SESSION
@@ -1162,7 +1164,7 @@ DAILY LIMIT       DAILY LIMIT
        ▼               ▼
 MONTHLY           SESSION
        │               │
-WEEKLY             IMMEDIATE LOCATION
+WEEKLY             LOCATION
        │               │
 DAILY              LIQUIDITY EVENT
        │               │
@@ -1170,11 +1172,11 @@ H4 STATE           M1 STRUCTURE
        │               │
 H1 STATE           M1 TRIGGER
        │               │
-COUNTER-TREND      SL
+COUNTER-TREND       SL
        │               │
-LIQUIDITY MAP      TARGET
+LIQUIDITY           TARGET
        │               │
-HTF REACTION       FINAL GATE
+HTF REACTION       ENTRY
        │
 LOCATION
        │
@@ -1202,14 +1204,20 @@ No Target Space → No Trade
 Invalid Risk → No Trade
 3 Trades → STOP
 2 Consecutive Losses → STOP
+
     </div>
 
 </section>
 
 
 <footer class="footer">
-    SNIPER GOD'S PLAN — V3.6.9 + V5 SUPER SCALP<br>
+
+    SNIPER GOD'S PLAN — V3.6.9 + V5 SUPER SCALP
+
+    <br>
+
     Market gives the setup → SNIPER executes.
+
 </footer>
 
 </div>
@@ -1222,24 +1230,46 @@ Invalid Risk → No Trade
 ========================================================= */
 
 const state = {
+
     preparation:false,
+
     session:null,
+
     mode:null,
+
     step:0,
+
+    /*
+       IMPORTANT:
+
+       Each answer is now stored as an ARRAY.
+
+       Example:
+
+       state.answers[10] = [0,2,4]
+
+       This allows true Multi-Selection.
+    */
+
     answers:{},
-    trades:JSON.parse(localStorage.getItem("sniperTrades") || "[]")
+
+    trades:JSON.parse(
+        localStorage.getItem("sniperTrades") || "[]"
+    )
+
 };
 
 
-/* =========================================================
-   DAILY TRADE ENGINE
-========================================================= */
-
 const dailyTrades = () => {
 
-    const today = new Date().toISOString().slice(0,10);
+    const today = new Date()
+        .toISOString()
+        .slice(0,10);
 
-    return state.trades.filter(t => t.date === today);
+    return state.trades.filter(
+        t => t.date === today
+    );
+
 };
 
 
@@ -1251,19 +1281,27 @@ function consecutiveLosses(){
 
     for(let i=today.length-1;i>=0;i--){
 
-        const result=(today[i].result || "").toUpperCase();
+        const result=(today[i].result || "")
+            .toUpperCase()
+            .trim();
 
         if(
             result.includes("LOSS") ||
             result.includes("-")
         ){
+
             count++;
+
         }else{
+
             break;
+
         }
+
     }
 
     return count;
+
 }
 
 
@@ -1273,24 +1311,41 @@ function consecutiveLosses(){
 
 function completePreparation(){
 
-    const a=document.getElementById("gratitude").checked;
-    const b=document.getElementById("focus333").checked;
-    const c=document.getElementById("meditation").checked;
+    const a=document
+        .getElementById("gratitude")
+        .checked;
+
+    const b=document
+        .getElementById("focus333")
+        .checked;
+
+    const c=document
+        .getElementById("meditation")
+        .checked;
+
 
     if(!a || !b || !c){
 
-        document.getElementById("prepMessage").className="alert danger";
+        document.getElementById("prepMessage")
+            .className="alert danger";
 
-        document.getElementById("prepMessage").innerHTML=
-        "🔴 SYSTEM LOCKED — هر سه مرحله Daily Preparation باید کامل شوند.";
+        document.getElementById("prepMessage")
+            .innerHTML=
+            "🔴 SYSTEM LOCKED — هر سه مرحله Daily Preparation باید کامل شوند.";
 
         return;
+
     }
+
 
     state.preparation=true;
 
-    document.getElementById("dailyPreparation").classList.add("hidden");
-    document.getElementById("sessionSection").classList.remove("hidden");
+    document.getElementById("dailyPreparation")
+        .classList.add("hidden");
+
+    document.getElementById("sessionSection")
+        .classList.remove("hidden");
+
 }
 
 
@@ -1302,23 +1357,35 @@ function selectSession(session,element){
 
     state.session=session;
 
-    document.querySelectorAll("#sessionSection .option")
-        .forEach(x=>x.classList.remove("selected"));
+    document.querySelectorAll(
+        "#sessionSection .option"
+    ).forEach(x =>
+        x.classList.remove("selected")
+    );
 
     element.classList.add("selected");
 
-    document.getElementById("sessionBadge").textContent=
+    const badge=
+        document.getElementById("sessionBadge");
+
+    badge.textContent=
         "SESSION: "+session;
 
-    document.getElementById("sessionBadge").classList.add("active");
+    badge.classList.add("active");
 
-    document.getElementById("sessionMessage").className="alert success";
 
-    document.getElementById("sessionMessage").innerHTML=
+    document.getElementById("sessionMessage")
+        .className="alert success";
+
+    document.getElementById("sessionMessage")
+        .innerHTML=
         "🟢 "+session+
-        " selected. Session = Trading Hours + Liquidity Context.";
+        " selected. Session فقط Trading Hours و Liquidity Context است.";
 
-    document.getElementById("sessionContinue").disabled=false;
+
+    document.getElementById("sessionContinue")
+        .disabled=false;
+
 }
 
 
@@ -1326,8 +1393,12 @@ function goToMode(){
 
     if(!state.session)return;
 
-    document.getElementById("sessionSection").classList.add("hidden");
-    document.getElementById("modeSection").classList.remove("hidden");
+    document.getElementById("sessionSection")
+        .classList.add("hidden");
+
+    document.getElementById("modeSection")
+        .classList.remove("hidden");
+
 }
 
 
@@ -1339,19 +1410,29 @@ function selectMode(mode,element){
 
     state.mode=mode;
 
-    document.querySelectorAll("#modeSection .option")
-        .forEach(x=>x.classList.remove("selected"));
+    document.querySelectorAll(
+        "#modeSection .option"
+    ).forEach(x =>
+        x.classList.remove("selected")
+    );
 
     element.classList.add("selected");
 
-    document.getElementById("modeBadge").textContent=
+
+    const badge=
+        document.getElementById("modeBadge");
+
+    badge.textContent=
         mode==="DAY"
         ? "MODE: V3.6.9 DAY TRADE"
         : "MODE: V5 SUPER SCALP";
 
-    document.getElementById("modeBadge").classList.add("active");
+    badge.classList.add("active");
 
-    document.getElementById("modeContinue").disabled=false;
+
+    document.getElementById("modeContinue")
+        .disabled=false;
+
 }
 
 
@@ -1363,62 +1444,92 @@ function startSystem(){
 
     if(!state.mode)return;
 
-    if(dailyTrades().length>=3){
 
-        alert("🔴 TRADING DAY CLOSED — Maximum Daily Trades = 3");
+    const todayTrades=dailyTrades();
+
+
+    if(todayTrades.length>=3){
+
+        alert(
+            "🔴 TRADING DAY CLOSED — Maximum Daily Trades = 3"
+        );
 
         return;
+
     }
+
 
     if(consecutiveLosses()>=2){
 
-        alert("🔴 STOP FOR THE DAY — 2 Consecutive Losses");
+        alert(
+            "🔴 STOP FOR THE DAY — 2 Consecutive Losses"
+        );
 
         return;
+
     }
 
-    document.getElementById("modeSection").classList.add("hidden");
 
-    document.getElementById("assistantSection").classList.remove("hidden");
-    document.getElementById("journalSection").classList.remove("hidden");
-    document.getElementById("playbookSection").classList.remove("hidden");
-    document.getElementById("treeSection").classList.remove("hidden");
+    document.getElementById("modeSection")
+        .classList.add("hidden");
+
+    document.getElementById("assistantSection")
+        .classList.remove("hidden");
+
+    document.getElementById("journalSection")
+        .classList.remove("hidden");
+
+    document.getElementById("playbookSection")
+        .classList.remove("hidden");
+
+    document.getElementById("treeSection")
+        .classList.remove("hidden");
+
 
     state.step=0;
+
     state.answers={};
 
+
     renderStep();
+
     renderJournal();
+
     updateTradeBadge();
+
 }
 
 
 /* =========================================================
-   QUESTION ENGINE
-   select:
-   single = only one option
-   multi  = multiple options
+   STEP BUILDER
 ========================================================= */
+
+/*
+    multi:true
+    means multiple options can be selected.
+
+    multi:false
+    means only one option can be selected.
+*/
+
 
 const daySteps=[
 
 {
     title:"STEP 1 — DAILY TRADE LIMIT",
-    tf:"RISK ENGINE",
-    question:"امروز چند معامله انجام شده است؟",
-    select:"single",
+    question:"امروز چند معامله ثبت شده است؟",
+    multi:false,
     options:[
-        ["0–1 TRADE","ظرفیت معاملاتی هنوز فعال است."],
+        ["0–1 TRADE","ظرفیت معامله وجود دارد."],
         ["2 TRADES","فقط یک معامله دیگر مجاز است."],
-        ["3 TRADES","سقف معاملات روزانه تکمیل شده است."]
+        ["3 TRADES","Trading Day Closed."]
     ]
 },
 
 {
     title:"STEP 2 — DAILY RISK STATE",
-    tf:"RISK ENGINE",
-    question:"وضعیت ریسک امروز چگونه است؟",
-    select:"single",
+    question:"وضعیت ریسک امروز چیست؟",
+    multi:false,
     options:[
         ["NO LOSS LIMIT BREACHED","Risk Engine فعال است."],
         ["1 LOSS","ادامه با کنترل ریسک."],
@@ -1428,54 +1539,45 @@ const daySteps=[
 
 {
     title:"STEP 3 — MONTHLY CONTEXT",
-    tf:"MONTHLY",
-    question:"Context اصلی Monthly چیست؟",
-    select:"single",
+    question:"در تایم‌فریم Monthly، Context اصلی چیست؟",
+    multi:false,
     options:[
-        ["BULLISH","ساختار و Liquidity در جهت صعودی است."],
-        ["BEARISH","ساختار و Liquidity در جهت نزولی است."],
-        ["RANGE","بازار در یک Range معتبر قرار دارد."],
-        ["NEUTRAL","Context کافی برای تصمیم‌گیری وجود ندارد."]
+        ["BULLISH","ساختار و External Liquidity صعودی است."],
+        ["BEARISH","ساختار و External Liquidity نزولی است."],
+        ["RANGE","بازار در Range معتبر است."],
+        ["NEUTRAL","Context کافی برای تصمیم وجود ندارد."]
     ]
 },
 
 {
     title:"STEP 4 — WEEKLY CONTEXT",
-    tf:"WEEKLY",
-    question:"Context فعلی Weekly چیست؟",
-    select:"multi",
+    question:"در تایم‌فریم Weekly، Context اصلی چیست؟",
+    multi:false,
     options:[
-        ["BULLISH / EXPANSION","ساختار و Expansion صعودی است."],
-        ["BEARISH / EXPANSION","ساختار و Expansion نزولی است."],
-        ["CORRECTION","بازار در فاز Correction قرار دارد."],
-        ["RANGE","Weekly Range معتبر وجود دارد."],
-        ["WEEKLY LIQUIDITY","قیمت در نزدیکی Liquidity مهم Weekly است."],
-        ["UNCLEAR","Context کافی نیست."]
+        ["BULLISH / EXPANSION","ساختار و Expansion صعودی."],
+        ["BEARISH / EXPANSION","ساختار و Expansion نزولی."],
+        ["CORRECTION","بازار در Correction است."],
+        ["RANGE / UNCLEAR","Range یا Context نامشخص."]
     ]
 },
 
 {
     title:"STEP 5 — DAILY CONTEXT",
-    tf:"DAILY",
-    question:"قیمت و ساختار Daily چه شرایطی دارند؟",
-    select:"multi",
+    question:"در تایم‌فریم Daily، Context اصلی چیست؟",
+    multi:false,
     options:[
-        ["BULLISH","Daily Structure صعودی است."],
-        ["BEARISH","Daily Structure نزولی است."],
-        ["RANGE","Daily Range معتبر است."],
-        ["CORRECTION","Daily در فاز Correction است."],
-        ["DAILY SWING","قیمت در نزدیکی Daily Swing قرار دارد."],
-        ["PREVIOUS DAY HIGH","قیمت در نزدیکی High روز قبل است."],
-        ["PREVIOUS DAY LOW","قیمت در نزدیکی Low روز قبل است."],
-        ["UNCLEAR","Context کافی نیست."]
+        ["BULLISH","Daily Structure صعودی."],
+        ["BEARISH","Daily Structure نزولی."],
+        ["RANGE","Daily Range."],
+        ["CORRECTION","Daily Correction."],
+        ["UNCLEAR","Context مشخص نیست."]
     ]
 },
 
 {
     title:"STEP 6 — H4 MARKET STATE",
-    tf:"H4",
-    question:"Market State در H4 چیست؟",
-    select:"single",
+    question:"در تایم‌فریم H4، Market State چیست؟",
+    multi:false,
     options:[
         ["BULLISH","HH → HL → HH"],
         ["BEARISH","LL → LH → LL"],
@@ -1486,199 +1588,148 @@ const daySteps=[
 
 {
     title:"STEP 7 — H1 ROUTER",
-    tf:"H1",
-    question:"ساختار H1 نسبت به H4 در چه وضعیتی است؟",
-    select:"multi",
+    question:"در تایم‌فریم H1، وضعیت ساختار نسبت به H4 چیست؟",
+    multi:false,
     options:[
         ["ALIGNMENT","H1 و H4 هم‌جهت هستند."],
         ["H1 CORRECTION","H1 خلاف جهت H4 و در Correction است."],
         ["COUNTER-TREND CANDIDATE","شرایط بررسی Counter-Trend وجود دارد."],
-        ["H1 LIQUIDITY","قیمت در نزدیکی H1 Liquidity قرار دارد."],
         ["UNCLEAR","ساختار H1 مشخص نیست."]
     ]
 },
 
 {
     title:"STEP 8 — COUNTER-TREND ENGINE",
-    tf:"H1 COUNTER-TREND",
-    question:"Counter-Trend Line در چه وضعیتی قرار دارد؟",
-    select:"multi",
+    question:"در تایم‌فریم H1/H4، Counter-Trend Line چه وضعیتی دارد؟",
+    multi:false,
     options:[
-        ["NOT ACTIVE","Counter-Trend در این سناریو فعال نیست."],
-        ["TOUCH #1","فقط Context است؛ Entry ممنوع."],
-        ["TOUCH #2","Critical Event؛ Triggerهای بعدی باید بررسی شوند."],
+        ["NOT ACTIVE","Counter-Trend فعال نیست."],
+        ["TOUCH #1","فقط Context؛ Entry ممنوع."],
+        ["TOUCH #2","Critical Event؛ Triggerها را بررسی کن."],
         ["TOUCH #3","Quality Enhancement."],
-        ["CORRECTION STRUCTURE","ساختار Correction تأیید شده است."],
-        ["TRIGGER CONFIRMED","Trigger لازم برای بررسی Entry ایجاد شده است."],
         ["INVALID","شرایط Counter-Trend کامل نیست."]
     ]
 },
 
 {
     title:"STEP 9 — LIQUIDITY MAP",
-    tf:"MONTHLY / WEEKLY / DAILY / H4 / H1 / SESSION / M15 / M5 / M1",
-    question:"قیمت اکنون در نزدیکی کدام Liquidity Levelها قرار دارد؟",
-    select:"multi",
+    question:"در حال حاضر کدام Liquidity Levelها در قیمت فعال یا نزدیک هستند؟",
+    multi:true,
     options:[
-        ["MONTHLY HIGH","Monthly High"],
-        ["MONTHLY LOW","Monthly Low"],
-        ["WEEKLY HIGH","Weekly High"],
-        ["WEEKLY LOW","Weekly Low"],
-        ["DAILY HIGH","Daily High"],
-        ["DAILY LOW","Daily Low"],
-        ["PREVIOUS DAY HIGH","High روز قبل"],
-        ["PREVIOUS DAY LOW","Low روز قبل"],
-        ["H4 SWING","H4 Major Swing"],
-        ["H1 SWING","H1 Major Swing"],
-        ["ASIA HIGH / LOW","Asia Session Liquidity"],
-        ["LONDON HIGH / LOW","London Session Liquidity"],
-        ["NEW YORK HIGH / LOW","New York Session Liquidity"],
-        ["RANGE HIGH / LOW","Range Boundary"],
-        ["INTERNAL LIQUIDITY","Internal Liquidity"],
-        ["EQ","Equilibrium"],
-        ["M15 LIQUIDITY","M15 Liquidity"],
-        ["M5 LIQUIDITY","M5 Liquidity"],
-        ["M1 MICRO LIQUIDITY","M1 Micro Liquidity"],
-        ["UNCLEAR","Liquidity مهمی مشخص نیست."]
+        ["MONTHLY / WEEKLY LIQUIDITY","Monthly یا Weekly High/Low."],
+        ["DAILY LIQUIDITY","Daily High/Low یا Previous Day High/Low."],
+        ["DAILY SWING","Daily Major Swing High/Low."],
+        ["H4 / H1 SWING","H4 یا H1 Major Swing."],
+        ["SESSION LIQUIDITY","Asia / London / New York High/Low."],
+        ["RANGE LIQUIDITY","Range High / Low / EQ."],
+        ["LOWER TF LIQUIDITY","M15 / M5 / M1 Liquidity."],
+        ["INTERNAL LIQUIDITY","Internal Liquidity."],
+        ["UNCLEAR","Liquidity معتبر مشخص نیست."]
     ]
 },
 
 {
     title:"STEP 10 — HTF LIQUIDITY REACTION",
-    tf:"HTF",
-    question:"قیمت نسبت به HTF Liquidity چه واکنشی نشان داده است؟",
-    select:"multi",
+    question:"پس از برخورد قیمت با HTF Liquidity، چه واکنشی در تایم‌فریم مربوطه ایجاد شده است؟",
+    multi:false,
     options:[
-        ["BREAK","Liquidity Level شکسته شده است."],
-        ["CLOSE BEYOND","Candle معتبر فراتر از Level بسته شده است."],
-        ["HOLD","قیمت بالای/پایین Level حفظ شده است."],
-        ["ACCEPTANCE","Acceptance بعد از Break شکل گرفته است."],
-        ["SWEEP","Liquidity Sweep اتفاق افتاده است."],
-        ["REJECTION","قیمت از Level Reject شده است."],
-        ["RECLAIM","Level دوباره Reclaim شده است."],
-        ["REACTION PENDING","واکنش هنوز مشخص نشده است."],
+        ["BREAK & ACCEPTANCE","Break → Close Beyond → Hold → Acceptance."],
+        ["SWEEP & REVERSAL","Sweep → Rejection → Reclaim → Confirmation."],
+        ["REACTION PENDING","واکنش هنوز مشخص نیست؛ WAIT."],
         ["NO HTF POOL","قیمت در HTF Liquidity Pool نیست."]
     ]
 },
 
 {
     title:"STEP 11 — LOCATION",
-    tf:"HTF / DAILY / H4 / H1 / SESSION / RANGE",
-    question:"قیمت اکنون در کدام Locationها قرار دارد؟",
-    select:"multi",
+    question:"در حال حاضر قیمت در کدام Locationها قرار دارد؟",
+    multi:true,
     options:[
-        ["HTF EXTREME","Monthly / Weekly / Daily Extreme"],
-        ["DAILY SWING","Daily Swing"],
-        ["PREVIOUS DAY HIGH","Previous Day High"],
-        ["PREVIOUS DAY LOW","Previous Day Low"],
-        ["WEEKLY HIGH / LOW","Weekly Liquidity"],
-        ["H4 MAJOR SWING","H4 Major Swing"],
-        ["H1 MAJOR SWING","H1 Major Swing"],
-        ["SESSION LIQUIDITY","Asia / London / New York Liquidity"],
-        ["RANGE HIGH","Range High"],
-        ["RANGE LOW","Range Low"],
-        ["SUPPLY / DEMAND","Supply / Demand Zone"],
-        ["RECLAIMED LEVEL","Reclaimed Level"],
-        ["BREAKOUT RETEST","Breakout Retest"],
-        ["STRUCTURAL EDGE","Structural Edge"],
-        ["RANGE MIDDLE / EQ","NO TRADE — Location ضعیف است."]
+        ["HTF EXTREME / REVERSAL ZONE","Monthly / Weekly / Daily Extreme یا Reversal Zone."],
+        ["DAILY SWING","قیمت روی Daily Swing High/Low یا نزدیک آن است."],
+        ["PREVIOUS DAY HIGH / LOW","قیمت روی High/Low روز قبل یا نزدیک آن است."],
+        ["SESSION LIQUIDITY","قیمت روی Asia/London/New York Liquidity است."],
+        ["H4 / H1 MAJOR SWING","قیمت در Major Swing تایم‌فریم بالاتر است."],
+        ["RANGE HIGH / LOW","قیمت در لبه Range قرار دارد."],
+        ["SUPPLY / DEMAND","قیمت در Zone معتبر Supply/Demand است."],
+        ["RECLAIMED LEVEL","قیمت روی Level Reclaimed قرار دارد."],
+        ["BREAKOUT RETEST","قیمت در Breakout Retest قرار دارد."],
+        ["STRUCTURAL EDGE","قیمت در Structural Edge قرار دارد."],
+        ["RANGE MIDDLE / EQ","قیمت در Middle / EQ Range است؛ NO TRADE."]
     ]
 },
 
 {
     title:"STEP 12 — LIQUIDITY EVENT",
-    tf:"M15 / M5 / M1",
-    question:"چه Liquidity Eventی ایجاد شده است؟",
-    select:"multi",
+    question:"در کدام تایم‌فریم‌ها و با چه نوعی Liquidity Event ایجاد شده است؟",
+    multi:true,
     options:[
-        ["SWEEP","Liquidity Sweep اتفاق افتاده است."],
-        ["REJECTION","قیمت از Liquidity Reject شده است."],
-        ["FAKE BREAKOUT","Breakout شکست خورده و قیمت برگشته است."],
-        ["BREAKOUT","Level شکسته شده است."],
-        ["CLOSE BEYOND","Break با Close معتبر تأیید شده است."],
-        ["HOLD","Level بعد از Break حفظ شده است."],
-        ["RECLAIM","Level دوباره Reclaim شده است."],
-        ["ACCEPTANCE","Acceptance شکل گرفته است."],
+        ["M15 SWEEP","در M15 Sweep + Reaction ایجاد شده."],
+        ["M15 FAKE BREAKOUT","در M15 Fake Breakout + Failure ایجاد شده."],
+        ["M15 RECLAIM","در M15 Break/Sweep → Return → Valid Close → Hold."],
+        ["M15 BREAKOUT","در M15 Break + Close Beyond ایجاد شده."],
+        ["M5 LIQUIDITY EVENT","در M5 Liquidity Event ایجاد شده."],
+        ["M1 MICRO SWEEP","در M1 Micro Liquidity Sweep ایجاد شده."],
+        ["M1 RECLAIM","در M1 Micro Level Reclaim ایجاد شده."],
         ["NONE","Liquidity Event معتبر وجود ندارد."]
     ]
 },
 
 {
     title:"STEP 13 — M15 CONFIRMATION",
-    tf:"M15",
-    question:"چه Confirmationی در M15 شکل گرفته است؟",
-    select:"multi",
+    question:"در تایم‌فریم M15 چه Confirmationای ایجاد شده است؟",
+    multi:true,
     options:[
-        ["SWEEP","Liquidity Sweep"],
-        ["REJECTION","Rejection بعد از Sweep"],
-        ["MSS","Market Structure Shift"],
-        ["DISPLACEMENT","Strong Displacement"],
-        ["BREAKOUT","Valid Breakout"],
-        ["CLOSE BEYOND","Valid Close Beyond"],
-        ["RETEST","Retest بعد از Break"],
-        ["HOLD","Hold بعد از Retest"],
-        ["RECLAIM","Valid Reclaim"],
-        ["NONE","Confirmation معتبر وجود ندارد."]
+        ["SWEEP → MSS","Sweep → Rejection → MSS."],
+        ["SWEEP → DISPLACEMENT","Sweep → Strong Displacement → Structure Shift."],
+        ["BREAKOUT → RETEST → HOLD","Break → Close → Retest → Hold."],
+        ["FAKE BREAKOUT → RECLAIM","Failure → Return → Reclaim → Structure."],
+        ["NONE","Confirmation معتبر ایجاد نشده."]
     ]
 },
 
 {
     title:"STEP 14 — M5 STRUCTURE",
-    tf:"M5",
-    question:"آیا M5 ساختار قابل معامله را تأیید کرده است؟",
-    select:"multi",
+    question:"در تایم‌فریم M5 کدام Structureها تأیید شده‌اند؟",
+    multi:true,
     options:[
-        ["MSS","M5 Market Structure Shift"],
-        ["DISPLACEMENT","M5 Strong Displacement"],
-        ["BOS","Break of Structure"],
-        ["RETEST","Retest معتبر"],
-        ["HOLD","Hold بعد از Retest"],
-        ["MSS + DISPLACEMENT","Sequence با کیفیت بالا."],
-        ["BOS + RETEST + HOLD","Structure کامل‌تر تأیید شده است."],
-        ["NONE","M5 Structure ناقص است."]
+        ["MSS","M5 Market Structure Shift."],
+        ["DISPLACEMENT","M5 Directional Displacement."],
+        ["BOS","M5 Break of Structure."],
+        ["RETEST + HOLD","M5 Retest و Hold."],
+        ["NONE","M5 Structure هنوز کامل نیست."]
     ]
 },
 
 {
     title:"STEP 15 — M1 EXECUTION",
-    tf:"M1",
-    question:"چه Execution Triggerی در M1 ایجاد شده است؟",
-    select:"multi",
+    question:"در تایم‌فریم M1 کدام Execution Trigger ایجاد شده است؟",
+    multi:true,
     options:[
-        ["BREAK","M1 Break"],
-        ["RETEST","M1 Retest"],
-        ["ENGULFING","Engulfing Trigger"],
-        ["M1 MSS","M1 Market Structure Shift"],
-        ["M1 DISPLACEMENT","M1 Displacement"],
-        ["MICRO SWEEP","Micro Liquidity Sweep"],
-        ["RECLAIM","Micro Reclaim"],
-        ["BREAK → RETEST → TRIGGER","Execution Sequence کامل"],
-        ["MICRO SWEEP → RECLAIM → TRIGGER","Micro Reclaim Sequence"],
-        ["NONE","M1 Trigger وجود ندارد."]
+        ["BREAK → RETEST → TRIGGER","Break → Retest → Entry Trigger."],
+        ["ENGULFING","M1 Engulfing Trigger."],
+        ["M1 MSS","M1 Market Structure Shift."],
+        ["M1 DISPLACEMENT","M1 Displacement."],
+        ["MICRO SWEEP → RECLAIM","Micro Sweep → Reclaim → Trigger."],
+        ["NONE","M1 Trigger معتبر وجود ندارد."]
     ]
 },
 
 {
     title:"STEP 16 — TARGET SPACE",
-    tf:"TARGET ENGINE",
-    question:"آیا فضای کافی تا Target وجود دارد؟",
-    select:"multi",
+    question:"آیا بین Entry و Target، فضای کافی و قابل معامله وجود دارد؟",
+    multi:false,
     options:[
         ["YES","Target Space کافی است."],
-        ["NEARBY LIQUIDITY","Liquidity هدف در مسیر وجود دارد."],
-        ["SESSION LIQUIDITY","Session Liquidity هدف وجود دارد."],
-        ["DAILY LIQUIDITY","Daily Liquidity هدف وجود دارد."],
-        ["HTF LIQUIDITY","HTF Liquidity هدف وجود دارد."],
-        ["NO","فضای کافی برای معامله وجود ندارد."],
-        ["UNCLEAR","Target هنوز مشخص نیست."]
+        ["NO","NO TRADE."],
+        ["UNCLEAR","WAIT تا Target Space مشخص شود."]
     ]
 },
 
 {
     title:"STEP 17 — FINAL RISK GATE",
-    tf:"RISK ENGINE",
-    question:"آیا SL، TP و Risk برای Entry معتبر و مشخص هستند؟",
-    select:"single",
+    question:"آیا Entry، SL، TP و Risk به‌صورت کامل مشخص و معتبر هستند؟",
+    multi:false,
     options:[
         ["VALID","SL پشت Invalidation Point و Target مشخص است."],
         ["INVALID","Risk یا SL/TP مناسب نیست."],
@@ -1688,11 +1739,10 @@ const daySteps=[
 
 {
     title:"FINAL — V3.6.9 ENTRY GATE",
-    tf:"FINAL DECISION",
-    question:"آیا تمام شروط لازم برای Entry هم‌زمان تأیید شده‌اند؟",
-    select:"single",
+    question:"آیا تمام شروط لازم برای Entry هم‌زمان معتبر هستند؟",
+    multi:false,
     options:[
-        ["ENTRY READY","Context + Location + Liquidity + Confirmation + Risk"],
+        ["ENTRY READY","Context + Location + Liquidity + Confirmation + Risk."],
         ["WAIT","Setup هنوز کامل نشده است."],
         ["NO TRADE","Scenario معتبر نیست."]
     ]
@@ -1709,11 +1759,10 @@ const scalpSteps=[
 
 {
     title:"V5 — STEP 1: DAILY LIMIT",
-    tf:"RISK ENGINE",
-    question:"امروز چند معامله انجام شده است؟",
-    select:"single",
+    question:"امروز چند معامله ثبت شده است؟",
+    multi:false,
     options:[
-        ["0–1 TRADE","ظرفیت معاملاتی فعال است."],
+        ["0–1 TRADE","ظرفیت معامله وجود دارد."],
         ["2 TRADES","فقط یک معامله دیگر مجاز است."],
         ["3 TRADES","Trading Day Closed."]
     ]
@@ -1721,121 +1770,109 @@ const scalpSteps=[
 
 {
     title:"V5 — STEP 2: SESSION",
-    tf:"SESSION",
-    question:"آیا Session فعلی برای Super Scalp فعال و قابل معامله است؟",
-    select:"single",
+    question:"در Session انتخاب‌شده، آیا بازار از نظر حرکت و Liquidity قابل معامله است؟",
+    multi:false,
     options:[
-        ["YES","Liquidity و حرکت مناسب است."],
-        ["NO","فعلاً معامله نکن."]
+        ["YES","بازار فعال و Liquidity مناسب است."],
+        ["NO","No Trade / Wait."]
     ]
 },
 
 {
     title:"V5 — STEP 3: IMMEDIATE LOCATION",
-    tf:"CURRENT PRICE / M1–M5",
-    question:"قیمت در حال حاضر در کدام Locationها قرار دارد؟",
-    select:"multi",
+    question:"در تایم‌فریم‌های نزدیک به قیمت، قیمت اکنون در کدام Locationها قرار دارد؟",
+    multi:true,
     options:[
-        ["SESSION LIQUIDITY","Asia / London / New York High or Low"],
-        ["PREVIOUS DAY HIGH","High روز قبل"],
-        ["PREVIOUS DAY LOW","Low روز قبل"],
-        ["DAILY SWING","Daily Swing High / Low"],
-        ["RANGE HIGH","Range High"],
-        ["RANGE LOW","Range Low"],
-        ["LOCAL SUPPORT / RESISTANCE","سطح نزدیک و قابل معامله"],
-        ["RECENT SWING","Micro / Local Swing"],
-        ["M15 LIQUIDITY","M15 Liquidity"],
-        ["M5 LIQUIDITY","M5 Liquidity"],
-        ["M1 MICRO LIQUIDITY","M1 Micro Liquidity"],
-        ["HTF LIQUIDITY","HTF Liquidity نزدیک قیمت"],
-        ["RANGE MIDDLE","Bad Location — از Entry اجتناب کن."]
+        ["SESSION LIQUIDITY","Asia / London / New York High/Low."],
+        ["PREVIOUS DAY HIGH / LOW","High/Low روز قبل."],
+        ["DAILY SWING","Daily Swing High/Low."],
+        ["RANGE EDGE","Range High / Low."],
+        ["LOCAL SUPPORT / RESISTANCE","سطح نزدیک و معتبر."],
+        ["RECENT SWING","Recent Micro / Local Swing."],
+        ["RECLAIMED LEVEL","Level تازه Reclaim شده."],
+        ["BREAKOUT RETEST","Breakout Retest نزدیک."],
+        ["RANGE MIDDLE","قیمت در Middle Range قرار دارد؛ Location ضعیف."],
+        ["UNCLEAR","Location مشخص نیست."]
     ]
 },
 
 {
     title:"V5 — STEP 4: LIQUIDITY EVENT",
-    tf:"M1 / M5",
-    question:"آیا اکنون یک Liquidity Event قابل معامله ایجاد شده است؟",
-    select:"multi",
+    question:"در تایم‌فریم M1/M5، چه Liquidity Eventهایی همین حالا ایجاد شده‌اند؟",
+    multi:true,
     options:[
-        ["MICRO SWEEP","Micro Liquidity Swept"],
-        ["BREAKOUT","Immediate Breakout"],
-        ["FAKE BREAKOUT","Breakout Failure + Return"],
-        ["RECLAIM","Level Reclaimed"],
-        ["REJECTION","Price Rejected the Level"],
-        ["MSS","Market Structure Shift"],
-        ["NONE","فعلاً Liquidity Event معتبر وجود ندارد."]
+        ["M1 MICRO SWEEP","M1 Liquidity Sweep."],
+        ["M5 SWEEP","M5 Liquidity Sweep."],
+        ["BREAKOUT","Breakout فوری."],
+        ["FAKE BREAKOUT","Breakout Failure + Return."],
+        ["RECLAIM","Level Reclaimed."],
+        ["SESSION LIQUIDITY SWEEP","Session High/Low swept شده."],
+        ["NONE","Liquidity Event معتبر وجود ندارد."]
     ]
 },
 
 {
     title:"V5 — STEP 5: M1 STRUCTURE",
-    tf:"M1",
-    question:"در M1 چه ساختاری ایجاد شده است؟",
-    select:"multi",
+    question:"در تایم‌فریم M1 چه Structureای ایجاد شده است؟",
+    multi:true,
     options:[
-        ["MSS","Micro Structure Shift"],
-        ["DISPLACEMENT","Strong Directional Displacement"],
-        ["MSS + DISPLACEMENT","High-Quality Sequence"],
-        ["BREAK","Micro Structure Break"],
-        ["RETEST","Breakout Retest"],
-        ["HOLD","Hold after Retest"],
-        ["BREAK + RETEST","Break and Retest Sequence"],
-        ["NONE","Structure هنوز شکل نگرفته است."]
+        ["MSS","Micro Structure Shift."],
+        ["DISPLACEMENT","Strong Directional Displacement."],
+        ["MSS + DISPLACEMENT","High-quality sequence."],
+        ["BREAK + RETEST","Break and Retest."],
+        ["BOS","Micro Break of Structure."],
+        ["NONE","Structure معتبر وجود ندارد."]
     ]
 },
 
 {
     title:"V5 — STEP 6: M1 TRIGGER",
-    tf:"M1 EXECUTION",
-    question:"آیا Trigger لحظه‌ای برای Entry وجود دارد؟",
-    select:"multi",
+    question:"در تایم‌فریم M1 کدام Trigger برای Entry وجود دارد؟",
+    multi:true,
     options:[
         ["MICRO SWEEP → MSS → DISPLACEMENT","Fast high-quality setup."],
-        ["BREAK → RETEST → ENTRY","Valid breakout setup."],
-        ["SWEEP → RECLAIM → TRIGGER","Valid reclaim setup."],
-        ["M1 MSS","Micro Structure Shift"],
-        ["M1 DISPLACEMENT","Directional Momentum"],
-        ["ENGULFING","Fast Momentum Trigger"],
+        ["BREAK → RETEST → ENTRY","Breakout execution."],
+        ["SWEEP → RECLAIM → TRIGGER","Reclaim execution."],
+        ["ENGULFING / MOMENTUM","Fast Momentum Trigger."],
+        ["M1 MSS + DISPLACEMENT","Structure + Displacement."],
         ["NONE","No Entry Trigger."]
     ]
 },
 
 {
-    title:"V5 — STEP 7: STOP LOSS",
-    tf:"M1 / INVALIDATION",
-    question:"SL باید در کجا قرار بگیرد؟",
-    select:"single",
+    title:"V5 — STEP 7: SL LOCATION",
+    question:"در تایم‌فریم M1، نقطه Invalidation کجاست و SL باید کجا قرار بگیرد؟",
+    multi:false,
     options:[
-        ["BEHIND INVALIDATION","SL پشت آخرین نقطه‌ای قرار می‌گیرد که سناریوی معامله را باطل می‌کند."],
-        ["BEHIND MICRO SWING","SL پشت آخرین Micro Swing معتبر."],
-        ["TOO WIDE","SL برای Super Scalp بیش از حد وسیع است."],
-        ["UNCLEAR","محل Invalidation هنوز مشخص نیست."]
+        ["BEHIND MICRO SWING","SL پشت آخرین Micro Swing معتبر قرار می‌گیرد."],
+        ["BEHIND SWEEP EXTREME","SL پشت Extreme مربوط به Sweep قرار می‌گیرد."],
+        ["BEHIND RECLAIM INVALIDATION","SL پشت Level/Structureای قرار می‌گیرد که با شکست آن Setup باطل می‌شود."],
+        ["BEHIND BREAKOUT RETEST","SL پشت Retest Invalidation قرار می‌گیرد."],
+        ["TOO WIDE","SL برای Super Scalp بیش از حد وسیع است؛ NO TRADE."],
+        ["UNCLEAR","Invalidation Point مشخص نیست؛ WAIT."]
     ]
 },
 
 {
     title:"V5 — STEP 8: TARGET",
-    tf:"TARGET ENGINE",
-    question:"بهترین Target نزدیک برای Super Scalp کدام است؟",
-    select:"multi",
+    question:"در مسیر Entry در تایم‌فریم‌های نزدیک، Target اصلی کدام است؟",
+    multi:true,
     options:[
         ["NEARBY LIQUIDITY","اولین Liquidity نزدیک."],
-        ["SESSION LIQUIDITY","Session High / Low."],
+        ["SESSION LIQUIDITY","Session High/Low."],
         ["LOCAL SWING","Nearby Local Swing."],
-        ["M1 LIQUIDITY","Micro Liquidity."],
-        ["M5 LIQUIDITY","M5 Liquidity."],
-        ["NO CLEAR TARGET","Target مشخص نیست."]
+        ["RECENT HIGH / LOW","Recent High/Low."],
+        ["RANGE EDGE","لبه Range."],
+        ["NO CLEAR TARGET","Target مشخص نیست؛ NO TRADE."]
     ]
 },
 
 {
     title:"V5 — FINAL GATE",
-    tf:"FINAL EXECUTION",
-    question:"آیا یک حرکت کوتاه، سریع و مشخص برای اجرا وجود دارد؟",
-    select:"single",
+    question:"آیا یک حرکت کوتاه، سریع و کاملاً مشخص برای Super Scalp وجود دارد؟",
+    multi:false,
     options:[
-        ["V5 ENTRY READY","Immediate opportunity معتبر است."],
+        ["V5 ENTRY READY","Location + Liquidity Event + M1 Structure + Trigger + SL + Target."],
         ["WAIT","Setup هنوز در حال شکل‌گیری است."],
         ["NO TRADE","Opportunity معتبر وجود ندارد."]
     ]
@@ -1845,7 +1882,7 @@ const scalpSteps=[
 
 
 /* =========================================================
-   QUESTION HELPERS
+   STEP HELPERS
 ========================================================= */
 
 function currentSteps(){
@@ -1853,24 +1890,56 @@ function currentSteps(){
     return state.mode==="DAY"
         ? daySteps
         : scalpSteps;
+
 }
 
 
-function getSelected(stepIndex=state.step){
+function getCurrentStep(){
 
-    const answer=state.answers[stepIndex];
+    return currentSteps()[state.step];
 
-    if(answer===undefined)return [];
-
-    return Array.isArray(answer)
-        ? answer
-        : [answer];
 }
 
 
-function isMulti(step){
+function getSelectedAnswers(){
 
-    return step.select==="multi";
+    return state.answers[state.step] || [];
+
+}
+
+
+function isSelected(index){
+
+    return getSelectedAnswers()
+        .includes(index);
+
+}
+
+
+/*
+    These options are exclusive.
+
+    If user selects NONE / NO TRADE /
+    INVALID / UNCLEAR / TOO WIDE etc.,
+    other selections are removed.
+
+    This prevents contradictory combinations.
+*/
+
+function isExclusiveOption(label){
+
+    const text=label.toUpperCase();
+
+    return(
+        text==="NONE" ||
+        text==="NO" ||
+        text.includes("NO TRADE") ||
+        text.includes("NO CLEAR TARGET") ||
+        text.includes("INVALID") ||
+        text==="UNCLEAR" ||
+        text.includes("TOO WIDE")
+    );
+
 }
 
 
@@ -1884,235 +1953,193 @@ function renderStep(){
 
     const s=steps[state.step];
 
-    document.getElementById("assistantTitle").textContent=
+    if(!s)return;
+
+
+    const selected=getSelectedAnswers();
+
+
+    document.getElementById("assistantTitle")
+        .textContent=
         state.mode==="DAY"
         ? "🦅 V3.6.9 DAY TRADE ASSISTANT"
         : "⚡ V5 SUPER SCALP ASSISTANT";
 
-    document.getElementById("stepCounter").textContent=
+
+    document.getElementById("stepCounter")
+        .textContent=
         `Step ${state.step+1} of ${steps.length}`;
 
-    document.getElementById("progressBar").style.width=
+
+    document.getElementById("progressBar")
+        .style.width=
         ((state.step+1)/steps.length*100)+"%";
 
-    const selected=getSelected();
 
     let html=`
 
         <div class="question">
 
-            <span class="tf">${escapeHtml(s.tf)}</span>
+            ${s.title}
 
-            <span class="mainq">
-                ${escapeHtml(s.title)}
-                <br>
-                ${escapeHtml(s.question)}
-            </span>
+            <br>
+
+            ${s.question}
+
+            ${
+                s.multi
+                ?
+                `<div class="multiHint">
+                    ☑ MULTI-SELECTION — می‌توانی چند گزینه را هم‌زمان انتخاب کنی.
+                </div>`
+                :
+                ``
+            }
 
         </div>
+
+        <div class="options">
+
     `;
 
-    if(isMulti(s)){
-
-        html+=`
-            <div class="multiHint">
-                ☑️ MULTI-SELECTION — می‌توانی چند گزینه را هم‌زمان انتخاب کنی.
-                پس از تکمیل انتخاب‌ها روی NEXT بزن.
-            </div>
-        `;
-    }
-
-    html+=`<div class="options">`;
 
     s.options.forEach((opt,i)=>{
 
-        const isSelected=selected.includes(i);
+        const active=selected.includes(i);
 
         html+=`
 
             <div
-                class="option ${isSelected?"selected":""}"
+                class="option ${active?"selected":""}"
                 onclick="chooseAnswer(${i},this)"
             >
 
-                <strong>${escapeHtml(opt[0])}</strong>
+                <strong>${opt[0]}</strong>
 
-                <small>${escapeHtml(opt[1])}</small>
+                <small>${opt[1]}</small>
 
             </div>
+
         `;
+
     });
+
 
     html+=`</div>`;
 
-    document.getElementById("questionArea").innerHTML=html;
+
+    document.getElementById("questionArea")
+        .innerHTML=html;
+
 
     updateDecisionMessage();
 
-    document.getElementById("backBtn").disabled=
-        state.step===0;
 
-    document.getElementById("nextBtn").disabled=
-        selected.length===0;
+    document.getElementById("backBtn")
+        .disabled=state.step===0;
 
-    document.getElementById("nextBtn").textContent=
+
+    document.getElementById("nextBtn")
+        .disabled=selected.length===0;
+
+
+    document.getElementById("nextBtn")
+        .textContent=
         state.step===steps.length-1
         ? "FINISH"
         : "NEXT →";
+
 }
 
 
 /* =========================================================
-   ANSWER SELECTION
+   CHOOSE ANSWER
 ========================================================= */
 
 function chooseAnswer(index,element){
 
-    const step=currentSteps()[state.step];
+    const s=getCurrentStep();
 
-    let selected=getSelected();
+    const label=s.options[index][0];
 
-    const label=step.options[index][0];
-
-    const exclusiveLabels=[
-        "NONE",
-        "NO",
-        "UNCLEAR",
-        "INVALID",
-        "TOO WIDE",
-        "NO CLEAR TARGET",
-        "RANGE MIDDLE",
-        "RANGE MIDDLE / EQ",
-        "TRANSITION",
-        "3 TRADES",
-        "2 CONSECUTIVE LOSSES"
+    let selected=[
+        ...getSelectedAnswers()
     ];
 
-    const isExclusive=
-        exclusiveLabels.some(x=>label===x) ||
-        label.includes("3 TRADES") ||
-        label.includes("2 CONSECUTIVE LOSSES");
 
-    if(!isMulti(step)){
+    /*
+        SINGLE SELECTION
+    */
 
-        state.answers[state.step]=index;
+    if(!s.multi){
 
-    }else{
+        selected=[index];
 
-        if(isExclusive){
+    }
 
-            state.answers[state.step]=[index];
+
+    /*
+        MULTI SELECTION
+    */
+
+    else{
+
+        const exclusive=isExclusiveOption(label);
+
+
+        if(exclusive){
+
+            /*
+                Exclusive option becomes the only answer.
+            */
+
+            selected=[index];
 
         }else{
 
-            selected=selected.filter(i=>{
+            /*
+                Remove all exclusive answers
+                before selecting a normal answer.
+            */
 
-                const currentLabel=step.options[i][0];
+            selected=selected.filter(i =>
+                !isExclusiveOption(
+                    s.options[i][0]
+                )
+            );
 
-                return !exclusiveLabels.some(x=>currentLabel===x);
-            });
 
             if(selected.includes(index)){
 
-                selected=selected.filter(i=>i!==index);
+                selected=selected.filter(
+                    i=>i!==index
+                );
 
             }else{
 
                 selected.push(index);
+
             }
 
-            state.answers[state.step]=selected;
         }
+
     }
+
+
+    state.answers[state.step]=selected;
+
+
+    /*
+        Re-render current step.
+
+        This is important because the old code
+        only changed the clicked DOM element.
+        The new version redraws the complete
+        state from the answer array.
+    */
 
     renderStep();
-}
 
-
-/* =========================================================
-   DECISION LOGIC
-========================================================= */
-
-function getStepDecision(){
-
-    const steps=currentSteps();
-
-    const step=steps[state.step];
-
-    const selected=getSelected();
-
-    if(selected.length===0){
-
-        return {
-            type:"none",
-            text:"هنوز گزینه‌ای انتخاب نشده است."
-        };
-    }
-
-    const labels=selected.map(
-        i=>step.options[i][0]
-    );
-
-    /*
-       HARD STOP CONDITIONS
-    */
-
-    if(labels.some(x=>
-        x==="3 TRADES" ||
-        x==="2 CONSECUTIVE LOSSES" ||
-        x==="TRANSITION" ||
-        x==="RANGE MIDDLE" ||
-        x==="RANGE MIDDLE / EQ" ||
-        x==="NO" ||
-        x==="TOO WIDE" ||
-        x==="NO CLEAR TARGET"
-    )){
-
-        return {
-            type:"danger",
-            text:labels.join(" + ")
-        };
-    }
-
-    /*
-       V3.6.9 HTF REACTION
-    */
-
-    if(
-        state.mode==="DAY" &&
-        labels.includes("REACTION PENDING")
-    ){
-
-        return {
-            type:"wait",
-            text:"HTF Liquidity هنوز واکنش مشخصی نداده است."
-        };
-    }
-
-    /*
-       UNCLEAR / WAIT
-    */
-
-    if(labels.some(x=>
-        x==="UNCLEAR" ||
-        x==="WAIT" ||
-        x==="MSS ONLY"
-    )){
-
-        return {
-            type:"wait",
-            text:labels.join(" + ")
-        };
-    }
-
-    /*
-       NORMAL
-    */
-
-    return {
-        type:"success",
-        text:labels.join(" + ")
-    };
 }
 
 
@@ -2122,18 +2149,44 @@ function getStepDecision(){
 
 function updateDecisionMessage(){
 
-    const result=getStepDecision();
+    const selectedIndexes=getSelectedAnswers();
 
-    if(result.type==="none"){
 
-        document.getElementById("decisionArea").innerHTML="";
+    if(selectedIndexes.length===0){
+
+        document.getElementById("decisionArea")
+            .innerHTML="";
 
         return;
+
     }
 
-    if(result.type==="danger"){
 
-        document.getElementById("decisionArea").innerHTML=`
+    const s=getCurrentStep();
+
+
+    const selectedLabels=
+        selectedIndexes.map(
+            i=>s.options[i][0]
+        );
+
+
+    const hasHardStop=
+        selectedLabels.some(
+            label=>isHardStop(label)
+        );
+
+
+    const hasWait=
+        selectedLabels.some(
+            label=>isWaitCondition(label)
+        );
+
+
+    if(hasHardStop){
+
+        document.getElementById("decisionArea")
+            .innerHTML=`
 
             <div class="alert danger">
 
@@ -2141,17 +2194,23 @@ function updateDecisionMessage(){
 
                 <br>
 
-                <small>${escapeHtml(result.text)}</small>
+                <small>
+                    ${selectedLabels.join(" + ")}
+                </small>
 
             </div>
-        `;
+
+            `;
 
         return;
+
     }
 
-    if(result.type==="wait"){
 
-        document.getElementById("decisionArea").innerHTML=`
+    if(hasWait){
+
+        document.getElementById("decisionArea")
+            .innerHTML=`
 
             <div class="alert warning">
 
@@ -2159,15 +2218,21 @@ function updateDecisionMessage(){
 
                 <br>
 
-                <small>${escapeHtml(result.text)}</small>
+                <small>
+                    ${selectedLabels.join(" + ")}
+                </small>
 
             </div>
-        `;
+
+            `;
 
         return;
+
     }
 
-    document.getElementById("decisionArea").innerHTML=`
+
+    document.getElementById("decisionArea")
+        .innerHTML=`
 
         <div class="alert success">
 
@@ -2175,68 +2240,72 @@ function updateDecisionMessage(){
 
             <br>
 
-            <small>${escapeHtml(result.text)}</small>
+            <small>
+                ${selectedLabels.join(" + ")}
+            </small>
 
         </div>
-    `;
+
+        `;
+
 }
 
 
 /* =========================================================
-   HARD STOP DETECTOR
+   HARD STOP LOGIC
 ========================================================= */
 
-function isHardStop(stepIndex){
+function isHardStop(label){
 
-    const steps=currentSteps();
+    const text=label.toUpperCase();
 
-    const step=steps[stepIndex];
 
-    const selected=getSelected(stepIndex);
+    return(
 
-    if(selected.length===0)return false;
+        text.includes("3 TRADES") ||
 
-    const labels=selected.map(
-        i=>step.options[i][0]
+        text.includes("2 CONSECUTIVE") ||
+
+        text==="TRANSITION" ||
+
+        text==="RANGE MIDDLE / EQ" ||
+
+        text==="RANGE MIDDLE" ||
+
+        text==="NONE" ||
+
+        text==="NO" ||
+
+        text.includes("INVALID") ||
+
+        text.includes("TOO WIDE") ||
+
+        text.includes("NO CLEAR TARGET") ||
+
+        text.includes("NO TRADE")
+
     );
 
-    if(
-        labels.includes("3 TRADES") ||
-        labels.includes("2 CONSECUTIVE LOSSES") ||
-        labels.includes("TRANSITION") ||
-        labels.includes("RANGE MIDDLE") ||
-        labels.includes("RANGE MIDDLE / EQ") ||
-        labels.includes("NO") ||
-        labels.includes("TOO WIDE") ||
-        labels.includes("NO CLEAR TARGET")
-    ){
+}
 
-        return true;
-    }
 
-    /*
-       NONE is a hard stop only in event / structure questions
-       where no valid event means there is no setup.
-    */
+function isWaitCondition(label){
 
-    if(labels.includes("NONE")){
+    const text=label.toUpperCase();
 
-        const hardNoneTitles=[
-            "STEP 12 — LIQUIDITY EVENT",
-            "STEP 13 — M15 CONFIRMATION",
-            "STEP 14 — M5 STRUCTURE",
-            "STEP 15 — M1 EXECUTION",
-            "V5 — STEP 4: LIQUIDITY EVENT",
-            "V5 — STEP 5: M1 STRUCTURE",
-            "V5 — STEP 6: M1 TRIGGER"
-        ];
 
-        if(hardNoneTitles.includes(step.title)){
-            return true;
-        }
-    }
+    return(
 
-    return false;
+        text.includes("REACTION PENDING") ||
+
+        text==="WAIT" ||
+
+        text.includes("UNCLEAR") ||
+
+        text.includes("MSS ONLY")
+
+    );
+
 }
 
 
@@ -2248,63 +2317,127 @@ function nextStep(){
 
     const steps=currentSteps();
 
-    const selected=getSelected();
+    const s=steps[state.step];
 
-    if(selected.length===0)return;
+    const selectedIndexes=
+        getSelectedAnswers();
+
+
+    if(selectedIndexes.length===0){
+
+        return;
+
+    }
+
+
+    const selectedLabels=
+        selectedIndexes.map(
+            i=>s.options[i][0]
+        );
+
 
     /*
-       HARD STOP
+        HARD STOP
     */
 
-    if(isHardStop(state.step)){
+    if(
+        selectedLabels.some(
+            label=>isHardStop(label)
+        )
+    ){
 
-        const labels=selected.map(
-            i=>steps[state.step].options[i][0]
-        );
+        const stopLabel=
+            selectedLabels.find(
+                label=>isHardStop(label)
+            );
+
 
         showFinalState(
             "🔴 NO TRADE",
-            "The selected condition invalidated the setup: "+
-            labels.join(" + ")
+            "شرط انتخاب‌شده Setup را invalid کرده است: "+
+            stopLabel
         );
 
         return;
+
     }
 
+
     /*
-       V3.6.9 REACTION PENDING
+        V3.6.9 HTF REACTION
     */
 
     if(
         state.mode==="DAY" &&
-        selected.includes(
-            steps[state.step].options.findIndex(
-                o=>o[0]==="REACTION PENDING"
-            )
-        )
+        selectedLabels.includes("REACTION PENDING")
     ){
 
         showFinalState(
+
             "🟡 WAIT — HTF LIQUIDITY REACTION PENDING",
-            "تا زمانی که واکنش قیمت نسبت به HTF Liquidity مشخص نشود، Entry ممنوع است."
+
+            "تا زمانی که واکنش Liquidity Pool تایم‌فریم بالاتر مشخص نشود، Entry ممنوع است."
+
         );
 
         return;
+
     }
 
+
     /*
-       FINAL STEP
+        WAIT
     */
 
-    if(state.step===steps.length-1){
+    if(
+        selectedLabels.some(
+            label=>isWaitCondition(label)
+        )
+    ){
 
-        const labels=selected.map(
-            i=>steps[state.step].options[i][0]
-        );
+        /*
+            Only WAIT if the step is a true
+            wait-state step.
+
+            This prevents an unrelated
+            UNCLEAR option from blocking
+            a multi-selection step.
+        */
 
         if(
-            labels.includes("ENTRY READY") ||
-            labels.includes("V5 ENTRY READY")
+            selectedLabels.length===1
+        ){
+
+            showFinalState(
+
+                "🟡 WAIT — SETUP DEVELOPING",
+
+                selectedLabels[0]
+
+            );
+
+            return;
+
+        }
+
+    }
+
+
+    /*
+        FINAL STEP
+    */
+
+    if(
+        state.step===steps.length-1
+    ){
+
+        const finalLabel=
+            selectedLabels[0];
+
+
+        if(
+            finalLabel==="ENTRY READY" ||
+            finalLabel==="V5 ENTRY READY"
         ){
 
             showFinalState(
@@ -2313,34 +2446,41 @@ function nextStep(){
                 ? "🟢 V3.6.9 ENTRY READY"
                 : "🟢 V5 SUPER SCALP ENTRY READY",
 
-                "تمام شروط لازم برای Entry تأیید شدند. قبل از ورود، SL و TP را در Journal ثبت کن."
-            );
+                "تمام شروط لازم تأیید شده‌اند. قبل از اجرای معامله، SL و TP را در Journal ثبت کن."
 
-        }else if(labels.includes("WAIT")){
-
-            showFinalState(
-                "🟡 WAIT — SETUP DEVELOPING",
-                "Setup هنوز کامل نشده است."
             );
 
         }else{
 
             showFinalState(
-                "🔴 NO TRADE",
-                "Scenario معتبر نیست."
+
+                finalLabel.includes("WAIT")
+                ? "🟡 WAIT — SETUP DEVELOPING"
+                : "🔴 NO TRADE",
+
+                finalLabel
+
             );
+
         }
 
         return;
+
     }
 
+
     /*
-       GO TO NEXT STEP
+        GO TO NEXT STEP
+
+        This fixes the old V5 SL bug.
+        Any valid selection is accepted
+        and the engine advances.
     */
 
     state.step++;
 
     renderStep();
+
 }
 
 
@@ -2350,11 +2490,17 @@ function nextStep(){
 
 function previousStep(){
 
-    if(state.step===0)return;
+    if(state.step===0){
+
+        return;
+
+    }
+
 
     state.step--;
 
     renderStep();
+
 }
 
 
@@ -2364,50 +2510,71 @@ function previousStep(){
 
 function showFinalState(title,text){
 
-    const type=
-        title.includes("ENTRY")
-        ? "success"
-        : title.includes("WAIT")
-        ? "warning"
-        : "danger";
+    let type="danger";
 
-    document.getElementById("questionArea").innerHTML=`
 
-        <div class="alert ${type}"
-             style="font-size:18px;font-weight:900">
+    if(title.includes("ENTRY")){
 
-            ${escapeHtml(title)}
+        type="success";
+
+    }else if(title.includes("WAIT")){
+
+        type="warning";
+
+    }
+
+
+    document.getElementById("questionArea")
+        .innerHTML=`
+
+        <div
+            class="alert ${type}"
+            style="font-size:18px;font-weight:900"
+        >
+
+            ${title}
 
         </div>
 
         <div class="description">
 
-            ${escapeHtml(text)}
+            ${text}
 
         </div>
-    `;
 
-    document.getElementById("decisionArea").innerHTML=`
+        `;
+
+
+    document.getElementById("decisionArea")
+        .innerHTML=`
 
         <div class="alert info">
 
             Engine:
-            ${state.mode==="DAY"
-                ?"V3.6.9 STRUCTURAL SNIPER"
-                :"V5 SUPER SCALP"}
+            ${
+                state.mode==="DAY"
+                ? "V3.6.9 STRUCTURAL SNIPER"
+                : "V5 SUPER SCALP"
+            }
 
             <br>
 
-            Session: ${escapeHtml(state.session)}
+            Session:
+            ${state.session}
 
             <br>
 
-            Daily Trades: ${dailyTrades().length}/3
+            Daily Trades:
+            ${dailyTrades().length}/3
 
         </div>
-    `;
 
-    document.getElementById("nextBtn").disabled=true;
+        `;
+
+
+    document.getElementById("nextBtn")
+        .disabled=true;
+
 }
 
 
@@ -2417,17 +2584,27 @@ function showFinalState(title,text){
 
 function resetPlan(){
 
-    if(!confirm(
-        "Reset the current plan and return to the beginning?"
-    )){
+    if(
+        !confirm(
+            "Reset the current plan and return to the beginning?"
+        )
+    ){
+
         return;
+
     }
 
+
     state.preparation=false;
+
     state.session=null;
+
     state.mode=null;
+
     state.step=0;
+
     state.answers={};
+
 
     document.getElementById("assistantSection")
         .classList.add("hidden");
@@ -2450,27 +2627,47 @@ function resetPlan(){
     document.getElementById("dailyPreparation")
         .classList.remove("hidden");
 
-    document.getElementById("gratitude").checked=false;
-    document.getElementById("focus333").checked=false;
-    document.getElementById("meditation").checked=false;
 
-    document.getElementById("sessionContinue").disabled=true;
-    document.getElementById("modeContinue").disabled=true;
+    document.getElementById("gratitude")
+        .checked=false;
+
+    document.getElementById("focus333")
+        .checked=false;
+
+    document.getElementById("meditation")
+        .checked=false;
+
+
+    document.getElementById("sessionContinue")
+        .disabled=true;
+
+    document.getElementById("modeContinue")
+        .disabled=true;
+
 
     document.querySelectorAll(".option")
-        .forEach(x=>x.classList.remove("selected"));
+        .forEach(
+            x=>x.classList.remove("selected")
+        );
 
-    document.getElementById("modeBadge").textContent=
+
+    document.getElementById("modeBadge")
+        .textContent=
         "MODE: NOT SELECTED";
 
-    document.getElementById("sessionBadge").textContent=
-        "SESSION: NOT SELECTED";
 
     document.getElementById("modeBadge")
         .classList.remove("active");
 
+
+    document.getElementById("sessionBadge")
+        .textContent=
+        "SESSION: NOT SELECTED";
+
+
     document.getElementById("sessionBadge")
         .classList.remove("active");
+
 }
 
 
@@ -2480,23 +2677,37 @@ function resetPlan(){
 
 function addTrade(){
 
-    const today=new Date().toISOString().slice(0,10);
+    const today=
+        new Date()
+        .toISOString()
+        .slice(0,10);
 
-    const tradesToday=dailyTrades();
+
+    const tradesToday=
+        dailyTrades();
+
 
     if(tradesToday.length>=3){
 
-        alert("🔴 Maximum Daily Trades = 3");
+        alert(
+            "🔴 Maximum Daily Trades = 3"
+        );
 
         return;
+
     }
+
 
     if(consecutiveLosses()>=2){
 
-        alert("🔴 2 Consecutive Losses — STOP FOR THE DAY");
+        alert(
+            "🔴 2 Consecutive Losses — STOP FOR THE DAY"
+        );
 
         return;
+
     }
+
 
     const trade={
 
@@ -2504,9 +2715,11 @@ function addTrade(){
 
         date:today,
 
-        time:new Date().toLocaleTimeString(),
+        time:new Date()
+            .toLocaleTimeString(),
 
-        session:state.session || "Unknown",
+        session:
+            state.session || "Unknown",
 
         engine:
             state.mode==="DAY"
@@ -2514,24 +2727,37 @@ function addTrade(){
             : "V5",
 
         direction:
-            document.getElementById("jDirection").value,
+            document.getElementById(
+                "jDirection"
+            ).value,
 
         entry:
-            document.getElementById("jEntry").value,
+            document.getElementById(
+                "jEntry"
+            ).value,
 
         sl:
-            document.getElementById("jSL").value,
+            document.getElementById(
+                "jSL"
+            ).value,
 
         tp:
-            document.getElementById("jTP").value,
+            document.getElementById(
+                "jTP"
+            ).value,
 
         result:
-            document.getElementById("jResult").value,
+            document.getElementById(
+                "jResult"
+            ).value,
 
         notes:
-            document.getElementById("jNotes").value
+            document.getElementById(
+                "jNotes"
+            ).value
 
     };
+
 
     if(
         !trade.direction ||
@@ -2545,14 +2771,20 @@ function addTrade(){
         );
 
         return;
+
     }
+
 
     state.trades.push(trade);
 
+
     localStorage.setItem(
         "sniperTrades",
-        JSON.stringify(state.trades)
+        JSON.stringify(
+            state.trades
+        )
     );
+
 
     clearJournalInputs();
 
@@ -2560,30 +2792,57 @@ function addTrade(){
 
     updateTradeBadge();
 
-    if(dailyTrades().length>=3){
+
+    if(
+        dailyTrades().length>=3
+    ){
 
         alert(
             "🔴 3 TRADES COMPLETED — TRADING DAY CLOSED"
         );
+
     }
 
-    if(consecutiveLosses()>=2){
+
+    if(
+        consecutiveLosses()>=2
+    ){
 
         alert(
             "🔴 2 CONSECUTIVE LOSSES — STOP FOR THE DAY"
         );
+
     }
+
 }
 
 
 function clearJournalInputs(){
 
-    document.getElementById("jDirection").value="";
-    document.getElementById("jEntry").value="";
-    document.getElementById("jSL").value="";
-    document.getElementById("jTP").value="";
-    document.getElementById("jResult").value="";
-    document.getElementById("jNotes").value="";
+    document.getElementById(
+        "jDirection"
+    ).value="";
+
+    document.getElementById(
+        "jEntry"
+    ).value="";
+
+    document.getElementById(
+        "jSL"
+    ).value="";
+
+    document.getElementById(
+        "jTP"
+    ).value="";
+
+    document.getElementById(
+        "jResult"
+    ).value="";
+
+    document.getElementById(
+        "jNotes"
+    ).value="";
+
 }
 
 
@@ -2591,16 +2850,22 @@ function renderJournal(){
 
     const data=state.trades;
 
+
     if(data.length===0){
 
-        document.getElementById("journalTable").innerHTML=
-
-        `<div class="alert info">
+        document.getElementById(
+            "journalTable"
+        ).innerHTML=
+        `
+        <div class="alert info">
             No trades recorded yet.
-        </div>`;
+        </div>
+        `;
 
         return;
+
     }
+
 
     let html=`
 
@@ -2626,9 +2891,14 @@ function renderJournal(){
         </thead>
 
         <tbody>
+
     `;
 
-    data.slice().reverse().forEach(t=>{
+
+    data
+    .slice()
+    .reverse()
+    .forEach(t=>{
 
         html+=`
 
@@ -2655,50 +2925,84 @@ function renderJournal(){
             <td>${escapeHtml(t.notes)}</td>
 
         </tr>
+
         `;
+
     });
+
 
     html+=`
 
         </tbody>
 
     </table>
+
     `;
 
-    document.getElementById("journalTable").innerHTML=html;
+
+    document.getElementById(
+        "journalTable"
+    ).innerHTML=html;
+
 }
 
 
 function clearJournal(){
 
-    if(!confirm(
-        "Delete the entire trade journal?"
-    )){
+    if(
+        !confirm(
+            "Delete the entire trade journal?"
+        )
+    ){
+
         return;
+
     }
+
 
     state.trades=[];
 
-    localStorage.removeItem("sniperTrades");
+    localStorage.removeItem(
+        "sniperTrades"
+    );
+
 
     renderJournal();
 
     updateTradeBadge();
+
 }
 
-
-/* =========================================================
-   SECURITY
-========================================================= */
 
 function escapeHtml(value){
 
     return String(value ?? "")
-        .replace(/&/g,"&amp;")
-        .replace(/</g,"&lt;")
-        .replace(/>/g,"&gt;")
-        .replace(/"/g,"&quot;")
-        .replace(/'/g,"&#039;");
+
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+
+        .replace(
+            /</g,
+            "&lt;"
+        )
+
+        .replace(
+            />/g,
+            "&gt;"
+        )
+
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+
+        .replace(
+            /'/g,
+            "&#039;"
+        );
+
 }
 
 
@@ -2708,43 +3012,69 @@ function escapeHtml(value){
 
 function updateTradeBadge(){
 
-    const count=dailyTrades().length;
+    const count=
+        dailyTrades().length;
 
-    const badge=document.getElementById("tradeBadge");
+
+    const badge=
+        document.getElementById(
+            "tradeBadge"
+        );
+
 
     badge.textContent=
         `TRADES: ${count} / 3`;
+
 
     badge.classList.remove(
         "green",
         "red"
     );
 
+
     if(count>=3){
 
-        badge.classList.add("red");
+        badge.classList.add(
+            "red"
+        );
 
     }else{
 
-        badge.classList.add("green");
+        badge.classList.add(
+            "green"
+        );
+
     }
 
-    if(consecutiveLosses()>=2){
 
-        document.getElementById("riskBadge").textContent=
+    const riskBadge=
+        document.getElementById(
+            "riskBadge"
+        );
+
+
+    if(
+        consecutiveLosses()>=2
+    ){
+
+        riskBadge.textContent=
             "RISK: STOP FOR DAY";
 
-        document.getElementById("riskBadge")
-            .classList.add("red");
+        riskBadge.classList.add(
+            "red"
+        );
 
     }else{
 
-        document.getElementById("riskBadge").textContent=
+        riskBadge.textContent=
             "RISK: ACTIVE";
 
-        document.getElementById("riskBadge")
-            .classList.remove("red");
+        riskBadge.classList.remove(
+            "red"
+        );
+
     }
+
 }
 
 
