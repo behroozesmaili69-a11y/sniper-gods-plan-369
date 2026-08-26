@@ -337,6 +337,12 @@ textarea{
     resize:vertical;
 }
 
+textarea[readonly]{
+    color:#9fc5ff;
+    border-color:#28558d;
+    background:#0b1524;
+}
+
 .tablewrap{
     overflow-x:auto;
 }
@@ -344,7 +350,7 @@ textarea{
 table{
     width:100%;
     border-collapse:collapse;
-    min-width:700px;
+    min-width:900px;
 }
 
 th,td{
@@ -352,6 +358,7 @@ th,td{
     border-bottom:1px solid #243044;
     text-align:right;
     font-size:12px;
+    vertical-align:top;
 }
 
 th{
@@ -454,10 +461,6 @@ summary{
 </header>
 
 
-<!-- =========================================================
-     DAILY PREPARATION
-========================================================= -->
-
 <section id="dailyPreparation" class="card">
 
     <h2>🔒 DAILY PREPARATION</h2>
@@ -509,10 +512,6 @@ summary{
 </section>
 
 
-<!-- =========================================================
-     SESSION
-========================================================= -->
-
 <section id="sessionSection" class="card hidden">
 
     <h2>🌍 SESSION SELECTION</h2>
@@ -550,10 +549,6 @@ summary{
 
 </section>
 
-
-<!-- =========================================================
-     MODE
-========================================================= -->
 
 <section id="modeSection" class="card hidden">
 
@@ -603,10 +598,6 @@ summary{
 </section>
 
 
-<!-- =========================================================
-     MAIN ASSISTANT
-========================================================= -->
-
 <section id="assistantSection" class="card hidden">
 
     <h2 id="assistantTitle">
@@ -652,16 +643,18 @@ summary{
 </section>
 
 
-<!-- =========================================================
-     JOURNAL
-========================================================= -->
-
 <section id="journalSection" class="card hidden">
 
     <h2>📓 TRADE JOURNAL</h2>
 
     <div class="description">
-        اطلاعات هر معامله در مرورگر ذخیره می‌شود.
+        این بخش فقط بعد از تکمیل Strategy Assistant باز می‌شود.
+        اطلاعات Strategy و تمام انتخاب‌های مراحل به‌صورت خودکار ثبت شده‌اند.
+        فقط اطلاعات واقعی اجرای معامله را وارد کن.
+    </div>
+
+    <div id="journalReadyMessage" class="alert success">
+        🟢 Strategy Decision ثبت شد. اطلاعات اجرای معامله را تکمیل کن.
     </div>
 
     <div class="grid">
@@ -711,6 +704,17 @@ summary{
     <br>
 
     <label class="description">
+        AUTO STRATEGY RECORD — Automatically generated from Assistant decisions
+    </label>
+
+    <textarea
+        id="jStrategyRecord"
+        readonly
+        placeholder="Strategy decision record will appear here..."></textarea>
+
+    <br>
+
+    <label class="description">
         Setup / Reason / Notes
     </label>
 
@@ -743,10 +747,6 @@ summary{
 </section>
 
 
-<!-- =========================================================
-     PLAYBOOK
-========================================================= -->
-
 <section id="playbookSection" class="card hidden">
 
     <h2>📖 FULL PLAYBOOK</h2>
@@ -756,11 +756,7 @@ summary{
     </div>
 
     <details>
-
-        <summary>
-            🔒 PART 0 — MASTER LAW
-        </summary>
-
+        <summary>🔒 PART 0 — MASTER LAW</summary>
         <div class="detailbody">
 
             SNIPER GOD'S PLAN از دو موتور مستقل تشکیل شده است:
@@ -776,16 +772,10 @@ summary{
             2 Consecutive Losses → STOP FOR THE DAY
 
         </div>
-
     </details>
 
-
     <details>
-
-        <summary>
-            🧠 V3.6.9 — MASTER ARCHITECTURE
-        </summary>
-
+        <summary>🧠 V3.6.9 — MASTER ARCHITECTURE</summary>
         <div class="detailbody">
 
             Context → Structure → Liquidity →
@@ -794,16 +784,10 @@ summary{
             Management → Exit
 
         </div>
-
     </details>
 
-
     <details>
-
-        <summary>
-            🌐 HTF CONTEXT
-        </summary>
-
+        <summary>🌐 HTF CONTEXT</summary>
         <div class="detailbody">
 
             Monthly → Weekly → Daily → H4 → H1
@@ -821,16 +805,10 @@ summary{
             H4 Transition = NO TRADE CONTEXT
 
         </div>
-
     </details>
 
-
     <details>
-
-        <summary>
-            🔄 H1 CORRECTION / COUNTER-TREND
-        </summary>
-
+        <summary>🔄 H1 CORRECTION / COUNTER-TREND</summary>
         <div class="detailbody">
 
             اگر H4 و H1 هم‌جهت باشند → Alignment.
@@ -855,16 +833,10 @@ summary{
             Touch به‌تنهایی Entry نیست.
 
         </div>
-
     </details>
 
-
     <details>
-
-        <summary>
-            💧 LIQUIDITY MAP
-        </summary>
-
+        <summary>💧 LIQUIDITY MAP</summary>
         <div class="detailbody">
 
             Monthly High / Low<br>
@@ -885,16 +857,10 @@ summary{
             Range High / Low
 
         </div>
-
     </details>
 
-
     <details>
-
-        <summary>
-            🔥 HTF LIQUIDITY REACTION
-        </summary>
-
+        <summary>🔥 HTF LIQUIDITY REACTION</summary>
         <div class="detailbody">
 
             وقتی قیمت وارد HTF Liquidity Pool می‌شود،
@@ -915,16 +881,10 @@ summary{
             Reaction Pending = WAIT
 
         </div>
-
     </details>
 
-
     <details>
-
-        <summary>
-            🔄 RECLAIM
-        </summary>
-
+        <summary>🔄 RECLAIM</summary>
         <div class="detailbody">
 
             Break / Sweep<br>
@@ -940,16 +900,10 @@ summary{
             Wick ≠ Reclaim
 
         </div>
-
     </details>
 
-
     <details>
-
-        <summary>
-            📍 LOCATION ENGINE
-        </summary>
-
+        <summary>📍 LOCATION ENGINE</summary>
         <div class="detailbody">
 
             در Location می‌توان چند عامل هم‌زمان وجود داشته باشد.
@@ -973,16 +927,10 @@ summary{
             Range Middle / EQ = NO TRADE
 
         </div>
-
     </details>
 
-
     <details>
-
-        <summary>
-            🦅 V3.6.9 M15 CONFIRMATION
-        </summary>
-
+        <summary>🦅 V3.6.9 M15 CONFIRMATION</summary>
         <div class="detailbody">
 
             MODEL 1:<br>
@@ -1006,16 +954,10 @@ summary{
             Reclaim → Structure Confirmation
 
         </div>
-
     </details>
 
-
     <details>
-
-        <summary>
-            🟦 V3.6.9 M5
-        </summary>
-
+        <summary>🟦 V3.6.9 M5</summary>
         <div class="detailbody">
 
             M5 وظیفه دارد Confirmation را به ساختار قابل معامله تبدیل کند.
@@ -1041,16 +983,10 @@ summary{
             M1 Trigger
 
         </div>
-
     </details>
 
-
     <details>
-
-        <summary>
-            🎯 V3.6.9 M1
-        </summary>
-
+        <summary>🎯 V3.6.9 M1</summary>
         <div class="detailbody">
 
             M1 فقط Execution Trigger است.
@@ -1064,16 +1000,10 @@ summary{
             Micro Sweep → Reclaim → Trigger
 
         </div>
-
     </details>
 
-
     <details>
-
-        <summary>
-            ⚡ V5 SUPER SCALP
-        </summary>
-
+        <summary>⚡ V5 SUPER SCALP</summary>
         <div class="detailbody">
 
             V5 برای حرکات کوتاه و سریع طراحی شده است.
@@ -1094,16 +1024,10 @@ summary{
             Nearby Target
 
         </div>
-
     </details>
 
-
     <details>
-
-        <summary>
-            🛑 MASTER NO-TRADE
-        </summary>
-
+        <summary>🛑 MASTER NO-TRADE</summary>
         <div class="detailbody">
 
             Context نامشخص<br>
@@ -1124,15 +1048,10 @@ summary{
             2 Consecutive Losses
 
         </div>
-
     </details>
 
 </section>
 
-
-<!-- =========================================================
-     DECISION TREE
-========================================================= -->
 
 <section id="treeSection" class="card hidden">
 
@@ -1238,18 +1157,6 @@ const state = {
     mode:null,
 
     step:0,
-
-    /*
-       IMPORTANT:
-
-       Each answer is now stored as an ARRAY.
-
-       Example:
-
-       state.answers[10] = [0,2,4]
-
-       This allows true Multi-Selection.
-    */
 
     answers:{},
 
@@ -1476,8 +1383,16 @@ function startSystem(){
     document.getElementById("assistantSection")
         .classList.remove("hidden");
 
+    /*
+       IMPORTANT:
+       Journal is intentionally NOT shown here.
+
+       It will only appear after the final
+       Strategy Gate is completed.
+    */
+
     document.getElementById("journalSection")
-        .classList.remove("hidden");
+        .classList.add("hidden");
 
     document.getElementById("playbookSection")
         .classList.remove("hidden");
@@ -1489,6 +1404,28 @@ function startSystem(){
     state.step=0;
 
     state.answers={};
+
+
+    document.getElementById("jStrategyRecord")
+        .value="";
+
+    document.getElementById("jDirection")
+        .value="";
+
+    document.getElementById("jEntry")
+        .value="";
+
+    document.getElementById("jSL")
+        .value="";
+
+    document.getElementById("jTP")
+        .value="";
+
+    document.getElementById("jResult")
+        .value="";
+
+    document.getElementById("jNotes")
+        .value="";
 
 
     renderStep();
@@ -1503,15 +1440,6 @@ function startSystem(){
 /* =========================================================
    STEP BUILDER
 ========================================================= */
-
-/*
-    multi:true
-    means multiple options can be selected.
-
-    multi:false
-    means only one option can be selected.
-*/
-
 
 const daySteps=[
 
@@ -1751,10 +1679,6 @@ const daySteps=[
 ];
 
 
-/* =========================================================
-   V5 SUPER SCALP
-========================================================= */
-
 const scalpSteps=[
 
 {
@@ -1916,16 +1840,6 @@ function isSelected(index){
 }
 
 
-/*
-    These options are exclusive.
-
-    If user selects NONE / NO TRADE /
-    INVALID / UNCLEAR / TOO WIDE etc.,
-    other selections are removed.
-
-    This prevents contradictory combinations.
-*/
-
 function isExclusiveOption(label){
 
     const text=label.toUpperCase();
@@ -2067,20 +1981,12 @@ function chooseAnswer(index,element){
     ];
 
 
-    /*
-        SINGLE SELECTION
-    */
-
     if(!s.multi){
 
         selected=[index];
 
     }
 
-
-    /*
-        MULTI SELECTION
-    */
 
     else{
 
@@ -2089,18 +1995,9 @@ function chooseAnswer(index,element){
 
         if(exclusive){
 
-            /*
-                Exclusive option becomes the only answer.
-            */
-
             selected=[index];
 
         }else{
-
-            /*
-                Remove all exclusive answers
-                before selecting a normal answer.
-            */
 
             selected=selected.filter(i =>
                 !isExclusiveOption(
@@ -2127,16 +2024,6 @@ function chooseAnswer(index,element){
 
 
     state.answers[state.step]=selected;
-
-
-    /*
-        Re-render current step.
-
-        This is important because the old code
-        only changed the clicked DOM element.
-        The new version redraws the complete
-        state from the answer array.
-    */
 
     renderStep();
 
@@ -2310,6 +2197,178 @@ function isWaitCondition(label){
 
 
 /* =========================================================
+   AUTO STRATEGY RECORD
+========================================================= */
+
+function buildStrategyRecord(){
+
+    const steps=currentSteps();
+
+    let lines=[];
+
+
+    lines.push(
+        "=============================="
+    );
+
+    lines.push(
+        "SNIPER GOD'S PLAN — STRATEGY RECORD"
+    );
+
+    lines.push(
+        "=============================="
+    );
+
+    lines.push(
+        "Engine: "+
+        (
+            state.mode==="DAY"
+            ? "V3.6.9 STRUCTURAL SNIPER"
+            : "V5 SUPER SCALP"
+        )
+    );
+
+    lines.push(
+        "Session: "+
+        (state.session || "Not selected")
+    );
+
+    lines.push("");
+
+
+    steps.forEach((step,index)=>{
+
+        const answers=
+            state.answers[index] || [];
+
+
+        if(answers.length===0){
+
+            return;
+
+        }
+
+
+        const selected=
+            answers.map(
+                answerIndex =>
+                    step.options[answerIndex][0]
+            );
+
+
+        lines.push(
+            `${index+1}. ${step.title}`
+        );
+
+        lines.push(
+            "   Question: "+step.question
+        );
+
+        lines.push(
+            "   Selected: "+selected.join(" + ")
+        );
+
+        lines.push("");
+
+    });
+
+
+    lines.push(
+        "=============================="
+    );
+
+    lines.push(
+        "FINAL STRATEGY DECISION"
+    );
+
+    lines.push(
+        "=============================="
+    );
+
+
+    const finalIndex=steps.length-1;
+
+    const finalAnswers=
+        state.answers[finalIndex] || [];
+
+
+    if(finalAnswers.length){
+
+        const finalLabels=
+            finalAnswers.map(
+                i=>steps[finalIndex].options[i][0]
+            );
+
+        lines.push(
+            finalLabels.join(" + ")
+        );
+
+    }else{
+
+        lines.push("Not completed");
+
+    }
+
+
+    return lines.join("\n");
+
+}
+
+
+/* =========================================================
+   SHOW JOURNAL AFTER ENTRY READY
+========================================================= */
+
+function openTradeJournal(){
+
+    const record=
+        buildStrategyRecord();
+
+
+    document.getElementById(
+        "jStrategyRecord"
+    ).value=record;
+
+
+    document.getElementById(
+        "journalReadyMessage"
+    ).className="alert success";
+
+
+    document.getElementById(
+        "journalReadyMessage"
+    ).innerHTML=
+        `
+        🟢 ${state.mode==="DAY"
+            ? "V3.6.9 ENTRY READY"
+            : "V5 SUPER SCALP ENTRY READY"
+        }
+        <br>
+        تمام انتخاب‌های Strategy به‌صورت خودکار در Journal ثبت شده‌اند.
+        فقط اطلاعات اجرای واقعی معامله را وارد کن.
+        `;
+
+
+    document.getElementById(
+        "journalSection"
+    ).classList.remove("hidden");
+
+
+    setTimeout(()=>{
+
+        document.getElementById(
+            "journalSection"
+        ).scrollIntoView({
+            behavior:"smooth",
+            block:"start"
+        });
+
+    },100);
+
+}
+
+
+/* =========================================================
    NEXT
 ========================================================= */
 
@@ -2336,10 +2395,6 @@ function nextStep(){
         );
 
 
-    /*
-        HARD STOP
-    */
-
     if(
         selectedLabels.some(
             label=>isHardStop(label)
@@ -2363,10 +2418,6 @@ function nextStep(){
     }
 
 
-    /*
-        V3.6.9 HTF REACTION
-    */
-
     if(
         state.mode==="DAY" &&
         selectedLabels.includes("REACTION PENDING")
@@ -2385,24 +2436,11 @@ function nextStep(){
     }
 
 
-    /*
-        WAIT
-    */
-
     if(
         selectedLabels.some(
             label=>isWaitCondition(label)
         )
     ){
-
-        /*
-            Only WAIT if the step is a true
-            wait-state step.
-
-            This prevents an unrelated
-            UNCLEAR option from blocking
-            a multi-selection step.
-        */
 
         if(
             selectedLabels.length===1
@@ -2425,6 +2463,12 @@ function nextStep(){
 
     /*
         FINAL STEP
+
+        The Journal is opened ONLY when
+        ENTRY READY / V5 ENTRY READY is selected.
+
+        No journal is shown for WAIT or
+        NO TRADE.
     */
 
     if(
@@ -2446,9 +2490,14 @@ function nextStep(){
                 ? "🟢 V3.6.9 ENTRY READY"
                 : "🟢 V5 SUPER SCALP ENTRY READY",
 
-                "تمام شروط لازم تأیید شده‌اند. قبل از اجرای معامله، SL و TP را در Journal ثبت کن."
+                "Strategy کامل شد. حالا اطلاعات واقعی معامله را در Journal وارد کن."
 
             );
+
+
+            openTradeJournal();
+
+            return;
 
         }else{
 
@@ -2462,20 +2511,12 @@ function nextStep(){
 
             );
 
-        }
+            return;
 
-        return;
+        }
 
     }
 
-
-    /*
-        GO TO NEXT STEP
-
-        This fixes the old V5 SL bug.
-        Any valid selection is accepted
-        and the engine advances.
-    */
 
     state.step++;
 
@@ -2668,6 +2709,11 @@ function resetPlan(){
     document.getElementById("sessionBadge")
         .classList.remove("active");
 
+
+    document.getElementById(
+        "jStrategyRecord"
+    ).value="";
+
 }
 
 
@@ -2702,6 +2748,31 @@ function addTrade(){
 
         alert(
             "🔴 2 Consecutive Losses — STOP FOR THE DAY"
+        );
+
+        return;
+
+    }
+
+
+    /*
+        Strategy record MUST exist before
+        saving a trade.
+
+        This guarantees that a trade cannot
+        be saved without its decision history.
+    */
+
+    const strategyRecord=
+        document.getElementById(
+            "jStrategyRecord"
+        ).value.trim();
+
+
+    if(!strategyRecord){
+
+        alert(
+            "🔴 Strategy Decision Record is missing. Complete the Strategy Assistant first."
         );
 
         return;
@@ -2750,6 +2821,9 @@ function addTrade(){
             document.getElementById(
                 "jResult"
             ).value,
+
+        strategyRecord:
+            strategyRecord,
 
         notes:
             document.getElementById(
@@ -2843,6 +2917,13 @@ function clearJournalInputs(){
         "jNotes"
     ).value="";
 
+    /*
+        Strategy record is intentionally
+        NOT cleared here because it belongs
+        to the current completed setup and
+        remains visible for review.
+    */
+
 }
 
 
@@ -2884,6 +2965,7 @@ function renderJournal(){
                 <th>SL</th>
                 <th>TP</th>
                 <th>Result</th>
+                <th>Strategy Record</th>
                 <th>Notes</th>
 
             </tr>
@@ -2921,6 +3003,17 @@ function renderJournal(){
             <td>${escapeHtml(t.tp)}</td>
 
             <td>${escapeHtml(t.result)}</td>
+
+            <td>
+                <details>
+                    <summary>VIEW DECISION</summary>
+                    <div class="detailbody">
+                        ${escapeHtml(
+                            t.strategyRecord || ""
+                        ).replace(/\n/g,"<br>")}
+                    </div>
+                </details>
+            </td>
 
             <td>${escapeHtml(t.notes)}</td>
 
